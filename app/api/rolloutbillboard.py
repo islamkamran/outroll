@@ -6,7 +6,7 @@ from fastapi import HTTPException, Header
 
 router = APIRouter()
 
-@router.post("/rolloutbillboard")
+@router.post("v1/rolloutbillboard")
 async def rollout(location:str=Form(...), price:str = Form(...),size:str=Form(...),
                    status:str = Form(...), register_date:str =Form(...),picture:str=Form(...), token:str=Header(None)):
     if token is None:
