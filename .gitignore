@@ -1,0 +1,4 @@
+/venv/
+/__pycache__/
+rollout_erd.png
+*.db
