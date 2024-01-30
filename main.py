@@ -1,25 +1,25 @@
 import uvicorn
 from fastapi import FastAPI
-from app.api import signin,login,signup,forgotpassword,rolloutbillboard
-from app.db.database import create_tables,connect_db,disconnect_db
+from fastapi.middleware.cors import CORSMiddleware
+from app.api import signin, login, signup, forgotpassword, rolloutbillboard
+from app.db.db_setup import SessionLocal, Base, engine
+# from app.db.database import connect_db, disconnect_db
 # from app.db.database import connect_db,disconnect_db
 
 app = FastAPI()
 
-# Event handlers for startup and shutdown
-@app.on_event("startup")
-async def on_startup():
-    await connect_db()
-    await create_tables()
 
-@app.on_event("shutdown")
-async def on_shutdown():
-    await disconnect_db()
+Base.metadata.create_all(bind=engine)
+# # Event handlers for startup and shutdown
+# @app.on_event("startup")
+# async def on_startup():
+#     await connect_db()
+#     # await create_tables()
 
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+# @app.on_event("shutdown")
+# async def on_shutdown():
+#     await disconnect_db()
 
-app = FastAPI()
 
 origins = [
     "http://localhost.tiangolo.com",
@@ -44,8 +44,8 @@ async def main():
 #API Routes
 app.include_router(signup.router)
 app.include_router(signin.router)
-app.include_router(login.router)
-app.include_router(forgotpassword.router)
+# app.include_router(login.router)
+# app.include_router(forgotpassword.router)
 app.include_router(rolloutbillboard.router)
 # app.include_router(my_billboards.router)
 # app.include_router(book_billboard.router)
@@ -53,6 +53,4 @@ app.include_router(rolloutbillboard.router)
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=5001, reload=True)
-
-
+    uvicorn.run("main:app", host="0.0.0.0", port=6001, reload=True)

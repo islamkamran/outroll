@@ -1,28 +1,41 @@
-from fastapi import APIRouter,Form
+from fastapi import APIRouter, Form, HTTPException, Depends
 from app.db.crud import get_user_by_credentials
-from fastapi import HTTPException
 from app.helper.authenticate_user import autheticate_user
-from app.db.crud import create_user,get_user_by_id
-
+from app.db.schemas import Signin, User
+from sqlalchemy.orm import Session
+from app.db.db_setup import get_db
+from app.db.crud import create_user
 
 
 router = APIRouter()
 # Signin API for entering into the application 
 @router.post("/v1/user/signin")
-async def signin(phonenumber:str=Form(...),password:str=Form(...)):
-    query = """
-    SELECT * from users
-    WHERE phonenumber = :phonenumber
-    """
-    values = {"phonenumber":phonenumber}
-    user_record = await get_user_by_credentials(query,values)
+async def signin(user_data: Signin, db: Session = Depends(get_db)):
+    user_record = await get_user_by_credentials(db, user_data.phonenumber)
+    print(user_record)
+    if user_record is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
     try:
-        return autheticate_user(user_record,password)# called from helper.py
+        # authenticate_user(data_retrived_from_DB, data_taken_from_user)
+        return autheticate_user(user_record, user_data)
     except Exception as e:
-        raise HTTPException(status_code=400, detail="Data not found")
-        
+        raise HTTPException(status_code=400, detail=f"{e}")
+# async def signin(phonenumber: str = Form(...), password: str = Form(...)):
+    # query = """
+    # SELECT * from users
+    # WHERE phonenumber = :phonenumber
+    # """
+    # values = {"phonenumber": phonenumber}
+    # user_record = await get_user_by_credentials(query, values)
+    # try:
+    #     return autheticate_user(user_record, user_data.password)  # called from helper.py
+    # except Exception as e:
+    #     raise HTTPException(status_code=400, detail=f"{e}")
+
+
 @router.post("/v1/user/signin_with_google")
-async def signin(fullname:str = Form(...),email:str=Form(...)):
+async def signin(fullname: str = Form(...), email: str = Form(...)):
     query = """
     SELECT * from users
     WHERE email = :email
@@ -60,7 +73,7 @@ async def signin(fullname:str = Form(...),email:str=Form(...)):
                 raise HTTPException(status_code=400, detail="Registeration failed")
             # return retval
     except Exception as e:
-        raise HTTPException(status_code=400, detail="Data not found")
+        raise HTTPException(status_code=400, detail=str(e))
     
 # @router.post("v1/user/signin_with_facebook")
 # async def signin(email:str=Form(...)):
