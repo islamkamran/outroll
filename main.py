@@ -2,25 +2,15 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import signin, signup, forgotpassword, rolloutbillboard
-from app.db.db_setup import SessionLocal, Base, engine
-# from app.db.database import connect_db, disconnect_db
-# from app.db.database import connect_db,disconnect_db
+from app.db.db_setup import Base, engine
+
 
 app = FastAPI()
 
-
+# This function calls the ORM declerative base so that it may catch the difference
 Base.metadata.create_all(bind=engine)
-# # Event handlers for startup and shutdown
-# @app.on_event("startup")
-# async def on_startup():
-#     await connect_db()
-#     # await create_tables()
 
-# @app.on_event("shutdown")
-# async def on_shutdown():
-#     await disconnect_db()
-
-
+# These are used to remove the CORS error B/W different server in my case Python Back-end and flutter-dart front-end
 origins = [
     "http://localhost.tiangolo.com",
     "https://localhost.tiangolo.com",
@@ -36,13 +26,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
+# Just for checking if the application is working properly
 @app.get("/")
 async def main():
     return {"message": "Hello World"}
 
 
-# API Routes
+# API routes name of the modules remember not the routes itself
 app.include_router(signup.router)
 app.include_router(signin.router)
 app.include_router(forgotpassword.router)

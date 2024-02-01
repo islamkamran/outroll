@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import session,sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 SQL_DATABASE_URI = "sqlite:///./users.db"
 
@@ -16,6 +16,7 @@ SessionLocal = sessionmaker(
 )
 
 Base = declarative_base()
+
 
 def get_db():
     db = SessionLocal()

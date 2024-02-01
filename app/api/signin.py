@@ -1,10 +1,9 @@
-from fastapi import APIRouter, Form, HTTPException, Depends
-from app.db.crud import get_user_by_credentials,get_user_by_google_credentials
+from fastapi import APIRouter, HTTPException, Depends
+from app.db.crud import get_user_by_credentials, get_user_by_google_credentials, create_user
 from app.helper.authenticate_user import autheticate_user
 from app.db.schemas import User, Signin, SigninWithGoogle
 from sqlalchemy.orm import Session
 from app.db.db_setup import get_db
-from app.db.crud import create_user
 from app.helper.jwt_token import jwt_access_token
 
 
@@ -16,7 +15,6 @@ router = APIRouter()
 @router.post("/v1/user/signin")
 async def signin(user_data: Signin, db: Session = Depends(get_db)):
     user_record = await get_user_by_credentials(db, user_data.phonenumber)
-    print(user_record)
     if user_record is None:
         raise HTTPException(status_code=404, detail="User not found")
     try:
@@ -51,45 +49,7 @@ async def signin_with_google(user_data: SigninWithGoogle, db: Session = Depends(
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-    # query = """
-    # SELECT * from users
-    # WHERE email = :email
-    # """
-    # values = {"email": email}
-    # user_record = await get_user_by_credentials(query, values)
-    # try:
-    #     if user_record:
-    #         retval = {
-    #             "id": user_record.id,
-    #             "fullname": user_record.fullname,
-    #             "email": user_record.email,
-    #         }
-    #         return retval
-    #     else:
-    #         user_id = await create_user(fullname, None, email, None)
-    #         if user_id:
-    #             query = """
-    #             SELECT * from users
-    #             WHERE email = :email
-    #             """
-    #             values = {"email": email}
-    #             user_record = await get_user_by_credentials(query, values)
-    #             try:
-    #                 if user_record:
-    #                     retval = {
-    #                         "id": user_record.id,
-    #                         "fullname": user_record.fullname,
-    #                         "email": user_record.email,
-    #                     }
-    #             except Exception as e:
-    #                 return str(e)
-    #             return retval
-    #         else:
-    #             raise HTTPException(status_code=400, detail="Registeration failed")
-    #         # return retval
-    # except Exception as e:
-    #     raise HTTPException(status_code=400, detail=str(e))
-    
+
 # @router.post("v1/user/signin_with_facebook")
 # async def signin(email:str=Form(...)):
 #     query = """

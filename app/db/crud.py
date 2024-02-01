@@ -1,13 +1,9 @@
-# from app.db.database import user_database
-# from app.db.
 from sqlalchemy.orm import Session
 from app.db.models import User, RollOutBillBoard
 from app.db.schemas import ForgotPassword
 
 
-# async def create_user(fullname: str, phonenumber: str, password: str):
 def create_user(db: Session, user_data):
-    # new_user = User(fullname=user_data.fullname, phonenumber=user_data.phonenumber, password=user_data.password)
     new_user = User(**user_data.dict())
 
     db.add(new_user)
@@ -15,16 +11,6 @@ def create_user(db: Session, user_data):
     db.refresh(new_user)
     print(f'the id: {new_user.id}')
     return new_user
-
-    # query = """
-    # INSERT INTO users(fullname, phonenumber, password)
-    # VALUES(:fullname, :phonenumber, :password)
-    # """
-    # values = {"fullname": fullname, "phonenumber": phonenumber,
-    #           "password": password}
-    # user_id = await user_database.execute(query, values)
-    # return user_id
-
 
 async def get_user_by_credentials(db: Session, phonenumber: str):
     user_record = db.query(User).filter(User.phonenumber == phonenumber).first()
@@ -49,16 +35,6 @@ def get_forgot_password(db: Session, user_data: ForgotPassword):
         return db.query(User).filter(User.email == user_data.email).first()
     # user_record = await user_database.fetch_one(query, values)
     return None
-
-
-# async def get_user_by_id(query: str, values: dict):
-#     user_record = await user_database.fetch_one(query, values)
-#     return user_record
-
-
-# async def get_userlogin_by_credentials(query: str, values: dict):
-#     user_record = await user_database.fetch_one(query, values)
-#     return user_record
 
 
 # **************** BillBoards *************************
