@@ -7,9 +7,9 @@ class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True, nullable=False)
     fullname = Column(String, index=True, nullable=False)
-    phonenumber = Column(String, unique=True, index=True, nullable=False)
-    email = Column(String, unique=True, index=True)
-    password = Column(String, nullable=False)
+    phonenumber = Column(String, unique=True, nullable=True)
+    email = Column(String, unique=True, nullable=True)
+    password = Column(String, nullable=True)
 
 
 class RollOutBillBoard(Base):
@@ -34,4 +34,5 @@ class BookBillBoard(Base):
     total_days = Column(Integer, index=True, nullable=False)
 
     fk_user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    fk_rollout_billboard_id = Column(Integer, ForeignKey("rolloutbillboard.rolloutid"), nullable=False)
+    fk_rollout_billboard_id = Column(Integer, ForeignKey(
+        "rolloutbillboard.rolloutid"), nullable=False)

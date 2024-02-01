@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import signin, login, signup, forgotpassword, rolloutbillboard
+from app.api import signin, signup, forgotpassword, rolloutbillboard
 from app.db.db_setup import SessionLocal, Base, engine
 # from app.db.database import connect_db, disconnect_db
 # from app.db.database import connect_db,disconnect_db
@@ -41,11 +41,11 @@ app.add_middleware(
 async def main():
     return {"message": "Hello World"}
 
-#API Routes
+
+# API Routes
 app.include_router(signup.router)
 app.include_router(signin.router)
-# app.include_router(login.router)
-# app.include_router(forgotpassword.router)
+app.include_router(forgotpassword.router)
 app.include_router(rolloutbillboard.router)
 # app.include_router(my_billboards.router)
 # app.include_router(book_billboard.router)
@@ -53,4 +53,4 @@ app.include_router(rolloutbillboard.router)
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=6001, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=5001, reload=True)

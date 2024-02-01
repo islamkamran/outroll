@@ -12,7 +12,6 @@ async def signup(user_data: Signup, db: Session = Depends(get_db)):
     print(user_data)
     if user_data.password != user_data.confirm_password:
         return {"Error": "Password do not match"}
-    
     pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
     def get_password_hash(password):
