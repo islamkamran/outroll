@@ -38,4 +38,9 @@ class Billboard(BaseModel):
     status: str
     register_date: str
     picture: Optional[str]
-    # fk_user_id: Optional[str]  # may be this part give error remember this in mind
+
+    class Config:
+        orm_mode = True
+
+class Publish_Billboard(Billboard):
+    fk_user_id: Optional[int]

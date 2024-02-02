@@ -20,6 +20,6 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
 
 def jwt_access_token(retval):
     access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    access_token = create_access_token(data={"sub": retval},
+    access_token = create_access_token(data={"sub": str(retval)},
                                        expires_delta=access_token_expires)
     return access_token

@@ -39,6 +39,15 @@ def get_forgot_password(db: Session, user_data: ForgotPassword):
 
 # **************** BillBoards *************************
 
+def rollout_billboard(db: Session, user_data):
+    new_billboard = RollOutBillBoard(**user_data.dict())
+
+    db.add(new_billboard)
+    db.commit()
+    db.refresh(new_billboard)
+    print(f'the id: {new_billboard.id}')
+    return new_billboard.rolloutid
+
 # async def rollout_billbaord(location: str, price: str, size: str, status: str,
 #                             register_date: str, picture: str, fk_user_id: int):
 #     query = """
