@@ -17,7 +17,7 @@ def autheticate_user(user_record, user_data):
     try:
         # remember the sequence of decrypting of matters !!!!!!!!
         if not verify_password(user_data.password, user_record.password):
-            raise HTTPException(status_code=400, detail="Incorrect password")
+            raise HTTPException(status_code=400, detail="Incorrect email/password")
 
         retval = {
             "userid": user_record.id,
@@ -27,4 +27,5 @@ def autheticate_user(user_record, user_data):
         }
         return {"access_token": jwt_access_token(retval), "token_type": "bearer"}
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=400, detail=f"{e}")
