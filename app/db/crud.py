@@ -12,11 +12,11 @@ def create_user(db: Session, user_data):
     print(f'the id: {new_user.id}')
     return new_user
 
+
 async def get_user_by_credentials(db: Session, phonenumber: str):
     user_record = db.query(User).filter(User.phonenumber == phonenumber).first()
     print(f'the user record found in DB: {user_record}')
     return user_record
-    # await user_database.fetch_one(query, values)
 
 
 async def get_user_by_google_credentials(db: Session, user_data):
@@ -26,14 +26,10 @@ async def get_user_by_google_credentials(db: Session, user_data):
 
 
 def get_forgot_password(db: Session, user_data: ForgotPassword):
-    print("forgot-1")
     if user_data.phonenumber:
-        print("forgot-2")
         return db.query(User).filter(User.phonenumber == user_data.phonenumber).first()
     elif user_data.email:
-        print("forgot-3")
         return db.query(User).filter(User.email == user_data.email).first()
-    # user_record = await user_database.fetch_one(query, values)
     return None
 
 
@@ -45,7 +41,7 @@ def rollout_billboard(db: Session, user_data):
     db.add(new_billboard)
     db.commit()
     db.refresh(new_billboard)
-    print(f'the id: {new_billboard.id}')
+    # print(f'the id: {new_billboard.rolloutid}')
     return new_billboard.rolloutid
 
 # async def rollout_billbaord(location: str, price: str, size: str, status: str,

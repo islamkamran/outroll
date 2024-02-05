@@ -7,19 +7,65 @@ ALGORITHM = "HS256"
 
 
 def decode_token(token: str):
-    print(f'token in decode: {token}')
     try:
-        print("hello")
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        print(payload)
         sub = payload.get("sub")
-        print(sub)
-        sub_dict = json.loads(sub.replace("'",'"'))
-        print(sub_dict)
+        sub_dict = json.loads(sub.replace("'", '"'))
         user_id = sub_dict.get("userid")
-        print(user_id)
+        print(f'the user ID extracted from token in decode: {user_id}')
         if user_id is None:
             raise HTTPException(status_code=401, detail="Token missing user ID")
         return user_id
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     except JWTError:
         raise HTTPException(status_code=401, detail="Invalid token")
