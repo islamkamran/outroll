@@ -42,5 +42,21 @@ class Billboard(BaseModel):
     class Config:
         orm_mode = True
 
+
 class Publish_Billboard(Billboard):
     fk_user_id: Optional[int]
+
+
+class Book_Billboard(BaseModel):
+    booking_status: str
+    booking_date_from: str
+    booking_date_to: str
+    total_days: str
+
+    class Config:
+        orm_mode = True
+
+
+class Booking_Done(Book_Billboard):
+    fk_user_id: Optional[int]
+    # fk_rollout_id: Optional[int]
