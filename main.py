@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import signin, signup, forgotpassword, rolloutbillboard
+from app.api import signin, signup, forgotpassword, rolloutbillboard, bookbillboard, listBillboards
 from app.db.db_setup import Base, engine
 
 
@@ -36,9 +36,10 @@ async def main():
 app.include_router(signup.router)
 app.include_router(signin.router)
 app.include_router(forgotpassword.router)
+app.include_router(listBillboards.router)
 app.include_router(rolloutbillboard.router)
+app.include_router(bookbillboard.router)
 # app.include_router(my_billboards.router)
-# app.include_router(book_billboard.router)
 # app.include_router(my_bookings.router)
 
 

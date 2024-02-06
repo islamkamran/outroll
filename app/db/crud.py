@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from app.db.models import User, RollOutBillBoard
+from app.db.models import User, RollOutBillBoard, BookBillBoard
 from app.db.schemas import ForgotPassword
 
 
@@ -35,6 +35,10 @@ def get_forgot_password(db: Session, user_data: ForgotPassword):
 
 # **************** BillBoards *************************
 
+def list_record(db: Session):
+    return db.query(RollOutBillBoard).all()
+
+
 def rollout_billboard(db: Session, user_data):
     new_billboard = RollOutBillBoard(**user_data.dict())
 
@@ -44,15 +48,12 @@ def rollout_billboard(db: Session, user_data):
     # print(f'the id: {new_billboard.rolloutid}')
     return new_billboard.rolloutid
 
-# async def rollout_billbaord(location: str, price: str, size: str, status: str,
-#                             register_date: str, picture: str, fk_user_id: int):
-#     query = """
-#     INSERT INTO rolloutbillboard(location,price,size,status,register_date,
-#     picture, fk_user_id)
-#     VALUES(:location,:price,:size,:status,:register_date,:picture,:fk_user_id)
-#     """
-#     values = {"location": location, "price": price, "size": size,
-#               "status": status, "register_date": register_date,
-#               "picture": picture, "fk_user_id": fk_user_id}
-#     rollout_id = await user_database.execute(query, values)
-#     return rollout_id
+
+def book_billboard(db: Session, user_data):
+    book_new_billboard = BookBillBoard(**user_data.dict())
+
+    db.add(book_new_billboard)
+    db.commit()
+    db.refresh(book_new_billboard)
+    print(f'the id: {book_new_billboard.bookingbillboardid}')
+    return book_new_billboard.bookingbillboardid

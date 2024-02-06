@@ -58,5 +58,5 @@ class Book_Billboard(BaseModel):
 
 
 class Booking_Done(Book_Billboard):
+    fk_rollout_id: Optional[int]
     fk_user_id: Optional[int]
-    # fk_rollout_id: Optional[int]

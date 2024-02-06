@@ -48,22 +48,3 @@ async def signin_with_google(user_data: SigninWithGoogle, db: Session = Depends(
         return {"access_token": jwt_access_token(retval), "token_type": "bearer"}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
-
-
-# @router.post("v1/user/signin_with_facebook")
-# async def signin(email:str=Form(...)):
-#     query = """
-#     SELECT * from users
-#     WHERE email = :email
-#     """
-#     values = {"email":email}
-#     user_record = await get_user_by_credentials(query,values)
-#     try:
-#         if user_record:
-#             retval={
-#                 "id":user_record.id,
-#                 "email":user_record.email,
-#             }
-#     except Exception as e:
-#         raise HTTPException(status_code=400, detail="Data not found")
-        
