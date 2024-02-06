@@ -51,12 +51,12 @@ class Book_Billboard(BaseModel):
     booking_status: str
     booking_date_from: str
     booking_date_to: str
-    total_days: str
+    total_days: int
+    rollout_id: int
 
     class Config:
         orm_mode = True
 
 
 class Booking_Done(Book_Billboard):
-    fk_rollout_id: Optional[int]
     fk_user_id: Optional[int]

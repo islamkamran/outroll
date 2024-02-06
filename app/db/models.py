@@ -32,7 +32,6 @@ class BookBillBoard(Base):
     booking_date_from = Column(String, index=True, nullable=False)
     booking_date_to = Column(String, index=True, nullable=False)
     total_days = Column(Integer, index=True, nullable=False)
-
+    rollout_id = Column(Integer, ForeignKey("rolloutbillboard.rolloutid"), nullable=False)
     fk_user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    fk_rollout_billboard_id = Column(Integer, ForeignKey(
-        "rolloutbillboard.rolloutid"), nullable=False)
+

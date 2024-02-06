@@ -11,15 +11,22 @@ router = APIRouter()
 
 @router.post("/v1/bookbillboard")
 def book(user_data: Book_Billboard, authorization: str = Header(None), db: Session = Depends(get_db)):
+    print("1")
     if authorization is None:
         raise HTTPException(status_code=401, detail="Unauthorized")
+    print("2")
     token = authorization.split(" ")[1] if authorization.startswith("Bearer ") else authorization
     user_id = decode_token(token)  # Extracting the user_id as it would be used as foreign Key in the rollout table
     billboard_data = user_data.dict()
     billboard_data["fk_user_id"] = user_id
+    print(billboard_data)
+    print("3")
     booking_id = book_billboard(db, Booking_Done(**billboard_data))
+    print(f'Booking done the id is: {booking_id}')
+    print("4")
     retval = {
         "booking_id": booking_id
     }
+    print("5")
 
     return {"Message": "Successfull", "Booking Successful": retval}
