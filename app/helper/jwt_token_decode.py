@@ -8,7 +8,6 @@ ALGORITHM = "HS256"
 
 def decode_token(token: str):
     try:
-        print("6 token in decode")
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         sub = payload.get("sub")
         sub_dict = json.loads(sub.replace("'", '"'))
@@ -16,7 +15,6 @@ def decode_token(token: str):
         print(f'the user ID extracted from token in decode: {user_id}')
         if user_id is None:
             raise HTTPException(status_code=401, detail="Token missing user ID")
-        print("got the token id 7")
         return user_id
     
 

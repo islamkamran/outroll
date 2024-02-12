@@ -39,6 +39,14 @@ def list_record(db: Session):
     return db.query(RollOutBillBoard).all()
 
 
+def my_billboards(db: Session, user_id):
+    return db.query(RollOutBillBoard).filter(RollOutBillBoard.fk_user_id == user_id).all()
+
+
+def my_booked_billboards(db: Session, user_id):
+    return db.query(BookBillBoard).filter(BookBillBoard.fk_user_id == user_id).all()
+
+
 def rollout_billboard(db: Session, user_data):
     new_billboard = RollOutBillBoard(**user_data.dict())
 
@@ -51,7 +59,7 @@ def rollout_billboard(db: Session, user_data):
 
 def book_billboard(db: Session, user_data):
     book_new_billboard = BookBillBoard(**user_data.dict())
-
+    #filter here for checking if billboard is avaliable or not
     db.add(book_new_billboard)
     db.commit()
     db.refresh(book_new_billboard)

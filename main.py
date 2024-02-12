@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import signin, signup, forgotpassword, rolloutbillboard, bookbillboard, listBillboards
+from app.api import signin, signup, forgotpassword, rolloutbillboard, bookbillboard, listBillboards, mybillboards, mybookings
 from app.db.db_setup import Base, engine
 
 
@@ -39,8 +39,8 @@ app.include_router(forgotpassword.router)
 app.include_router(listBillboards.router)
 app.include_router(rolloutbillboard.router)
 app.include_router(bookbillboard.router)
-# app.include_router(my_billboards.router)
-# app.include_router(my_bookings.router)
+app.include_router(mybillboards.router)
+app.include_router(mybookings.router)
 
 
 if __name__ == "__main__":
