@@ -21,5 +21,4 @@ def forgotpassword(user_data: ForgotPassword, db: Session = Depends(get_db)):
             }
             return {"Message": retval}
     except Exception as e:
-        print(f'Error: {e}')
-        raise HTTPException(status_code=500, detail="internal server error")
+        raise HTTPException(status_code=500, detail=str(e))

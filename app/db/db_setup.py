@@ -1,8 +1,12 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from dotenv import load_dotenv
+import os
 
-SQL_DATABASE_URI = "sqlite:///./users.db"
+load_dotenv()  # Load environment variables from .env file
+
+SQL_DATABASE_URI = os.getenv("DATABASE_URL")
 
 engine = create_engine(
     SQL_DATABASE_URI,

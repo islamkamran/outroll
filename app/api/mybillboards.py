@@ -19,24 +19,3 @@ def myrollouts(authorization: str = Header(None), db: Session = Depends(get_db))
         return {"My Published Rollouts": my_billboards(db, user_id)}
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"{e}")
-
-    # retval = {
-    #     # "rollout_id": rollout_id
-    # }
-
-    # return {"Message": "Successfull", "Billboard Rolled Out": retval}
-    # ******************** the API is done till here use the token ahead *******************
-    # fk_user_id = int(token)  # Take the token data as JWT token
-    # pr = {
-    #     user_data.location,
-    #     user_data.price
-    # }
-    # print(f'user data: {pr}')
-    # rollout_id = await rollout_billbaord(location,price,size,status, register_date,picture,fk_user_id)
-    # rollout_id = await rollout_billbaord(db, Publish_Billboard(**user_data.dict())) 
-    # print(f'the rollout from DB: {rollout_id}')
-    
-
-    # return rollout_id
-
-

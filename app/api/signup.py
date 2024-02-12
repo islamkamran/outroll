@@ -7,6 +7,7 @@ from app.db.crud import create_user
 
 router = APIRouter()
 
+
 @router.post("/v1/user/signup")
 async def signup(user_data: Signup, db: Session = Depends(get_db)):
     print(user_data)

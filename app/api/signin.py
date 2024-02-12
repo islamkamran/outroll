@@ -7,7 +7,6 @@ from app.db.db_setup import get_db
 from app.helper.jwt_token import jwt_access_token
 
 
-
 router = APIRouter()
 # Signin API for entering into the application
 
