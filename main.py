@@ -3,9 +3,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import signin, signup, forgotpassword, rolloutbillboard, bookbillboard, listBillboards, mybillboards, mybookings
 from app.db.db_setup import Base, engine
+from app.logs import setup_logging
 
 
 app = FastAPI()
+
+# Initiallizing the logging file
+setup_logging()
 
 # This function calls the ORM declerative base so that it may catch the difference
 Base.metadata.create_all(bind=engine)

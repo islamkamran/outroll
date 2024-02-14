@@ -4,15 +4,19 @@ from app.db.schemas import Signup, User
 from sqlalchemy.orm import Session
 from app.db.db_setup import get_db
 from app.db.crud import create_user
+import logging
 
 router = APIRouter()
 
 
 @router.post("/v1/user/signup")
 async def signup(user_data: Signup, db: Session = Depends(get_db)):
-    print(user_data)
+    logging.info(f'Attempting to register user {user_data.email}')  # understanding logs
+
     if user_data.password != user_data.confirm_password:
+        logging.error('Password and Confirm Password do not match')
         return {"Error": "Password do not match"}
+
     pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
     def get_password_hash(password):
