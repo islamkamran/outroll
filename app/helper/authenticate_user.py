@@ -1,7 +1,7 @@
 from fastapi import HTTPException
 from passlib.context import CryptContext
 from app.helper.jwt_token import jwt_access_token
-
+import logging
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
@@ -17,6 +17,7 @@ def autheticate_user(user_record, user_data):
     try:
         # remember the sequence of decrypting of matters !!!!!!!!
         if not verify_password(user_data.password, user_record.password):
+            logging.error('Error occured in authenticating the credentials of the user')
             raise HTTPException(status_code=400, detail="Incorrect email/password")
 
         retval = {
@@ -25,7 +26,9 @@ def autheticate_user(user_record, user_data):
             "phonenumber": user_record.phonenumber,
             "email": user_record.email
         }
-        return {"access_token": jwt_access_token(retval), "token_type": "bearer"}
+        access_token, refresh_token = jwt_access_token(retval)
+        logging.debug('recieved the refresh tokens')
+        return {"access_token": access_token, "token_type": "bearer", "refresh_token": refresh_token}
     except Exception as e:
-        print(e)
+        logging.error('Error occured in authenticate_user')
         raise HTTPException(status_code=400, detail=f"{e}")
