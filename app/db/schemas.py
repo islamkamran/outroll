@@ -37,13 +37,14 @@ class Billboard(BaseModel):
     size: str
     status: str
     register_date: str
-    picture: Optional[str]
+    # picture: Optional[str]
 
     class Config:
         orm_mode = True
 
 
 class Publish_Billboard(Billboard):
+    picture: Optional[str]
     fk_user_id: Optional[int]
 
 

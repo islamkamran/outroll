@@ -14,13 +14,17 @@ def decode_token(token: str):
     try:
         logging.info('trying to decode token and extract the ID from it so it will be used in foreign key')
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        # print(payload)
         sub = payload.get("sub")
-        sub_dict = json.loads(sub.replace("'", '"'))
-        user_id = sub_dict.get("userid")
+        retval = json.loads(sub.replace("'", '"'))
+        # print(f'data in decode: {sub_dict}')
+        user_id = retval.get("userid")
+        # print(f'the user id in new token by refresh: {user_id}')
         logging.info(f'the user ID extracted from token in decode: {user_id}')
         if user_id is None:
             raise HTTPException(status_code=401, detail="Token missing user ID")
-        return user_id
-    except JWTError:
+        return user_id, retval
+    except JWTError as e:
+        print(str(e))
         logging.error('Error occured in jwt_token_decode helper function')
         raise HTTPException(status_code=401, detail="Invalid token")

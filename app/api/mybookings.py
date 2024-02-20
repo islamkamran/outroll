@@ -16,8 +16,8 @@ def mybookings(authorization: str = Header(None), db: Session = Depends(get_db))
         raise HTTPException(status_code=401, detail="Unauthorized")
     token = authorization.split(" ")[1] if authorization.startswith("Bearer ") else authorization
     logging.info('token have two parts some time writen as token "value of token" or directly "token"')
-
-    user_id = decode_token(token)  # Extracting the user_id as it would be used as foreign Key in the rollout table
+        # we have return both the id and the complete data the only purpose is incase of refresh token we need all data in normal case we only need the id as foreign key
+    user_id, retval = decode_token(token)  # Extracting the user_id as it would be used as foreign Key in the rollout table
     logging.info(f'the user id after decoding: {user_id}')
     try:
         return {"My Booked Billboards": my_booked_billboards(db, user_id)}

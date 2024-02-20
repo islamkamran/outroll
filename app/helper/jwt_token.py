@@ -41,7 +41,13 @@ def jwt_access_token(retval):
     access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = create_access_token(data={"sub": str(retval)}, expires_delta=access_token_expires)
     logging.info('returning the token generated from jwt_access_token() funtion')
-    refresh_token = create_refresh_token(data={"sub": str(retval)}, expires_delta=access_token_expires)
+
+    return access_token
+
+
+def jwt_refresh_token(retval):
+    refresh_token_expires = timedelta(days=7)
+    refresh_token = create_refresh_token(data={"sub": str(retval)}, expires_delta=refresh_token_expires)
     logging.info('returning the refresh token generated from jwt_access_token() funtion')
 
-    return access_token, refresh_token
+    return refresh_token

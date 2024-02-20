@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import signin, signup, forgotpassword, rolloutbillboard, bookbillboard, listBillboards, mybillboards, mybookings
+from app.api import signin, signup, forgotpassword, rolloutbillboard, bookbillboard, listBillboards, mybillboards, mybookings, refreshtoken
 from app.db.db_setup import Base, engine
 from app.logs import setup_logging
 
@@ -13,6 +13,9 @@ setup_logging()
 
 # This function calls the ORM declerative base so that it may catch the difference
 Base.metadata.create_all(bind=engine)
+
+# Directory to store the uploaded images
+UPLOAD_DIR = "uploads"
 
 # These are used to remove the CORS error B/W different server in my case Python Back-end and flutter-dart front-end
 origins = [
@@ -45,7 +48,9 @@ app.include_router(rolloutbillboard.router)
 app.include_router(bookbillboard.router)
 app.include_router(mybillboards.router)
 app.include_router(mybookings.router)
+app.include_router(refreshtoken.router)
+
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=5001, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=5002, reload=True)

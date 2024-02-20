@@ -1,6 +1,6 @@
 from fastapi import HTTPException
 from passlib.context import CryptContext
-from app.helper.jwt_token import jwt_access_token
+from app.helper.jwt_token import jwt_access_token, jwt_refresh_token
 import logging
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -26,9 +26,8 @@ def autheticate_user(user_record, user_data):
             "phonenumber": user_record.phonenumber,
             "email": user_record.email
         }
-        access_token, refresh_token = jwt_access_token(retval)
-        logging.debug('recieved the refresh tokens')
-        return {"access_token": access_token, "token_type": "bearer", "refresh_token": refresh_token}
+        logging.debug('making the token and refresh token')
+        return {"access_token": jwt_access_token(retval), "token_type": "bearer", "refresh_token": jwt_refresh_token(retval)}
     except Exception as e:
         logging.error('Error occured in authenticate_user')
         raise HTTPException(status_code=400, detail=f"{e}")
