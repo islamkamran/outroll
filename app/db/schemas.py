@@ -32,6 +32,7 @@ class ForgotPassword(BaseModel):
 
 
 class Billboard(BaseModel):
+    print("in pydantic")
     location: str
     price: int
     size: str
