@@ -18,6 +18,7 @@ class RollOutBillBoard(Base):
     location = Column(String, index=True, nullable=False)
     price = Column(String, index=True, nullable=False)
     size = Column(String, index=True, nullable=False)
+    measurement = Column(String, index=True, nullable=False)  # This line is for checking if the measurement will be in inches, foots or meters
     status = Column(String, index=True, nullable=False)
     register_date = Column(String, nullable=False)
     picture = Column(String, index=True, nullable=False)

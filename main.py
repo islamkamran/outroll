@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import signin, signup, forgotpassword, rolloutbillboard, bookbillboard, listBillboards, mybillboards, mybookings, refreshtoken
+from app.api import signin, signup, forgotpassword, rolloutbillboard, bookbillboard, listBillboards, mybillboards, mybookings, refreshtoken, searchbillboard
 from app.db.db_setup import Base, engine
 from app.logs import setup_logging
 
@@ -49,6 +49,8 @@ app.include_router(bookbillboard.router)
 app.include_router(mybillboards.router)
 app.include_router(mybookings.router)
 app.include_router(refreshtoken.router)
+app.include_router(searchbillboard.router)
+
 
 
 

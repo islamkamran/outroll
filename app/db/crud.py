@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 from app.db.models import User, RollOutBillBoard, BookBillBoard
 from app.db.schemas import ForgotPassword
 import logging
+from sqlalchemy import or_
 
 
 def create_user(db: Session, user_data):
@@ -68,3 +69,10 @@ def book_billboard(db: Session, user_data):
     db.refresh(book_new_billboard)
     print(f'the id: {book_new_billboard.bookingbillboardid}')
     return book_new_billboard.bookingbillboardid
+
+
+def search_billboards(db: Session, place):
+    # return db.query(RollOutBillBoard).filter(RollOutBillBoard).all()
+    print(f'in DB crud operations: {place}')
+    return db.query(RollOutBillBoard).filter(or_(*[RollOutBillBoard.location.ilike(f"%{loc}%") for loc in place])).all()
+    # return db.query(RollOutBillBoard).all()
