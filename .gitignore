@@ -3,3 +3,4 @@
 rollout_erd.png
 *.db
 .env
+/uploads/
