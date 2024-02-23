@@ -1,85 +1,15 @@
-2024-02-22 15:06:17,361 - INFO - the user id after decoding: 1
-2024-02-22 15:06:17,361 - INFO - returning my booked billboards from crud funtion my_booked_billboards which is accessing BookBillBoard table
-2024-02-22 15:07:09,044 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 15:07:09,045 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 15:07:09,045 - INFO - the user ID extracted from token in decode: 1
-2024-02-22 15:07:09,045 - INFO - the user id after decoding: 1
-2024-02-22 15:07:09,045 - INFO - data: {'location': 'Rustam, mardan, pakistan', 'price': 150, 'size': '10x10', 'measurement': 'meter', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-02-22 15:07:09,045 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-02-22 16:15:50,787 - INFO - the user record found in DB: <app.db.models.User object at 0x7f7f18076200>
-2024-02-22 16:15:50,787 - INFO - Finding if user record exist in DB
-2024-02-22 16:15:50,788 - INFO - checking the user credentials if correct than access will be given
-2024-02-22 16:15:50,788 - WARNING - (trapped) error reading bcrypt version
-Traceback (most recent call last):
-  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-    version = _bcrypt.__about__.__version__
-AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-02-22 16:15:51,100 - INFO - JWT token created for the data of the user
-2024-02-22 16:15:51,100 - INFO - returning the token generated from jwt_access_token() funtion
-2024-02-22 16:15:51,100 - INFO - JWT refresh token created for the user data
-2024-02-22 16:15:51,100 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-02-22 16:16:09,705 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
-2024-02-22 16:30:48,614 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 16:30:48,614 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 16:30:48,616 - ERROR - Error occured in jwt_token_decode helper function
-2024-02-22 16:30:48,616 - ERROR - Error occured while rollouting billboard: 401: Invalid token
-2024-02-22 16:31:08,775 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 16:31:08,775 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 16:31:08,776 - INFO - the user ID extracted from token in decode: 1
-2024-02-22 16:31:08,776 - INFO - new token generated in refresh api
-2024-02-22 16:31:08,776 - INFO - JWT token created for the data of the user
-2024-02-22 16:31:08,776 - INFO - returning the token generated from jwt_access_token() funtion
-2024-02-22 16:31:25,330 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 16:31:25,331 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 16:31:25,331 - INFO - the user ID extracted from token in decode: 1
-2024-02-22 16:31:25,331 - INFO - the user id after decoding: 1
-2024-02-22 16:31:25,332 - INFO - data: {'location': 'islamabad', 'price': 150, 'size': '10x10', 'measurement': 'meter', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-02-22 16:31:25,332 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-02-22 16:34:46,653 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 16:34:46,654 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 16:34:46,654 - INFO - the user ID extracted from token in decode: 1
-2024-02-22 16:34:46,654 - INFO - the user id after decoding: 1
-2024-02-22 16:34:46,654 - INFO - data: {'location': 'peshawar,jahangirabad,mallofkpk', 'price': 150, 'size': '10x10', 'measurement': 'meter', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-02-22 16:34:46,655 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-02-22 17:06:25,143 - INFO - Attempting to register user shakeel@gmail.com
-2024-02-22 17:06:25,144 - WARNING - (trapped) error reading bcrypt version
-Traceback (most recent call last):
-  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-    version = _bcrypt.__about__.__version__
-AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-02-22 17:06:25,539 - INFO - new user registered in DB with the id: 2
-2024-02-22 17:06:25,539 - INFO - new user is created shakeel
-2024-02-22 17:06:25,540 - INFO - User sucessfully added
-2024-02-22 17:06:33,246 - INFO - the user record found in DB: <app.db.models.User object at 0x7fd8072c35e0>
-2024-02-22 17:06:33,246 - INFO - Finding if user record exist in DB
-2024-02-22 17:06:33,246 - INFO - checking the user credentials if correct than access will be given
-2024-02-22 17:06:33,534 - INFO - JWT token created for the data of the user
-2024-02-22 17:06:33,534 - INFO - returning the token generated from jwt_access_token() funtion
-2024-02-22 17:06:33,534 - INFO - JWT refresh token created for the user data
-2024-02-22 17:06:33,534 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-02-22 17:08:06,059 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 17:08:06,059 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 17:08:06,059 - INFO - the user ID extracted from token in decode: 2
-2024-02-22 17:08:06,059 - INFO - the user id after decoding: 2
-2024-02-22 17:08:06,060 - INFO - data: {'location': 'hayatabad,phase1,peshawar', 'price': 15000, 'size': '10x10', 'measurement': 'meter', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 2}
-2024-02-22 17:08:06,060 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-02-22 17:08:16,959 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
-2024-02-22 17:08:46,977 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 17:08:46,977 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 17:08:46,978 - ERROR - Error occured in jwt_token_decode helper function
-2024-02-22 17:08:52,742 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 17:08:52,742 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 17:08:52,742 - INFO - the user ID extracted from token in decode: 2
-2024-02-22 17:08:52,743 - INFO - the user id after decoding: 2
-2024-02-22 17:10:28,493 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 17:10:28,493 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 17:10:28,494 - INFO - the user ID extracted from token in decode: 2
-2024-02-22 17:10:28,590 - INFO - Booking done the id is: 2
-2024-02-22 17:10:35,295 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 17:10:35,295 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 17:10:35,296 - ERROR - Error occured in jwt_token_decode helper function
-2024-02-22 17:10:39,337 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-02-22 17:10:39,337 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-02-22 17:10:39,337 - INFO - the user ID extracted from token in decode: 2
-2024-02-22 17:10:39,337 - INFO - the user id after decoding: 2
-2024-02-22 17:10:39,337 - INFO - returning my booked billboards from crud funtion my_booked_billboards which is accessing BookBillBoard table
+2024-02-23 15:46:08,175 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-23 15:46:08,175 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-23 15:46:08,176 - INFO - the user ID extracted from token in decode: 1
+2024-02-23 15:46:08,176 - INFO - the user id after decoding: 1
+2024-02-23 15:46:08,177 - INFO - data: {'location': 'bunir', 'price': 150000, 'size': '100x100', 'measurement': 'foots', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/Screenshot from 2024-02-23 11-29-57.png', 'fk_user_id': 1}
+2024-02-23 15:46:36,305 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-23 15:46:36,305 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-23 15:46:36,306 - INFO - the user ID extracted from token in decode: 1
+2024-02-23 15:46:36,306 - INFO - the user id after decoding: 1
+2024-02-23 15:46:36,307 - INFO - data: {'location': 'bunir', 'price': 150000, 'size': '100x100', 'measurement': 'foots', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/Screenshot from 2024-02-23 11-29-57.png', 'fk_user_id': 1}
+2024-02-23 15:47:08,276 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-23 15:47:08,276 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-23 15:47:08,277 - INFO - the user ID extracted from token in decode: 1
+2024-02-23 15:47:08,277 - INFO - the user id after decoding: 1
+2024-02-23 15:47:08,278 - INFO - data: {'location': 'bunir', 'price': 150000, 'size': '100x100', 'measurement': 'foots', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/Screenshot from 2024-02-23 11-29-57.png', 'fk_user_id': 1}

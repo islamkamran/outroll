@@ -3,6 +3,7 @@ from app.db.models import User, RollOutBillBoard, BookBillBoard
 from app.db.schemas import ForgotPassword
 import logging
 from sqlalchemy import or_
+from fastapi import HTTPException
 
 
 def create_user(db: Session, user_data):
@@ -61,6 +62,20 @@ def rollout_billboard(db: Session, user_data):
     return new_billboard.rolloutid
 
 
+def update_billboard(db: Session, rollout_id: int, user_data):
+    update_rollout = db.query(RollOutBillBoard).filter(RollOutBillBoard.rolloutid == rollout_id).first()
+    if not update_rollout:
+        raise HTTPException(status_code=404, detail="Rollout not found")
+
+    # convert the userdata to dict to iterate through it using key value pair
+    user_data = user_data.dict()
+    for key, value in user_data.items():
+        setattr(update_rollout, key, value)
+
+    db.commit()
+    return update_rollout.rolloutid
+
+
 def book_billboard(db: Session, user_data):
     book_new_billboard = BookBillBoard(**user_data.dict())
     #filter here for checking if billboard is avaliable or not
@@ -72,7 +87,4 @@ def book_billboard(db: Session, user_data):
 
 
 def search_billboards(db: Session, place):
-    # return db.query(RollOutBillBoard).filter(RollOutBillBoard).all()
-    print(f'in DB crud operations: {place}')
     return db.query(RollOutBillBoard).filter(or_(*[RollOutBillBoard.location.ilike(f"%{loc}%") for loc in place])).all()
-    # return db.query(RollOutBillBoard).all()

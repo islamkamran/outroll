@@ -10,9 +10,8 @@ router = APIRouter()
 @router.get("/v1/searchbillboard")
 def search_list(place: str = Form(...), db: Session = Depends(get_db)):
     try:
-        print(place)
+        place = place.replace(" ", "")  # remove the spaces 
         place = place.split(',')  # This become a list
-        print(place)
         return {"List": search_billboards(db, place)}
     except Exception as e:
         logging.error(f'Error occured in listbillboards api; {str(e)}')
