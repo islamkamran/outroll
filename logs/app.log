@@ -13,3 +13,28 @@
 2024-02-23 15:47:08,277 - INFO - the user ID extracted from token in decode: 1
 2024-02-23 15:47:08,277 - INFO - the user id after decoding: 1
 2024-02-23 15:47:08,278 - INFO - data: {'location': 'bunir', 'price': 150000, 'size': '100x100', 'measurement': 'foots', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/Screenshot from 2024-02-23 11-29-57.png', 'fk_user_id': 1}
+2024-02-23 15:53:43,844 - INFO - the user record found in DB: <app.db.models.User object at 0x7f535803a260>
+2024-02-23 15:53:43,844 - INFO - Finding if user record exist in DB
+2024-02-23 15:53:43,844 - INFO - checking the user credentials if correct than access will be given
+2024-02-23 15:53:43,844 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-02-23 15:53:44,135 - INFO - JWT token created for the data of the user
+2024-02-23 15:53:44,135 - INFO - returning the token generated from jwt_access_token() funtion
+2024-02-23 15:53:44,136 - INFO - JWT refresh token created for the user data
+2024-02-23 15:53:44,136 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-02-23 15:54:29,374 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-23 15:54:29,375 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-23 15:54:29,375 - INFO - the user ID extracted from token in decode: 3
+2024-02-23 15:54:29,375 - INFO - the user id after decoding: 3
+2024-02-23 15:56:38,011 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-23 15:56:38,011 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-23 15:56:38,012 - INFO - the user ID extracted from token in decode: 3
+2024-02-23 15:56:38,012 - INFO - the user id after decoding: 3
+2024-02-23 15:56:38,014 - INFO - data: {'location': 'Mardan, Bakhshali', 'price': 15000, 'size': '10x10', 'measurement': 'meter', 'status': 'Avaliable', 'register_date': '22-feb-2024', 'picture': 'uploads/WhatsApp Image 2024-02-05 at 4.31.17 PM.jpeg', 'fk_user_id': 3}
+2024-02-23 15:56:54,549 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-23 15:56:54,549 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-23 15:56:54,550 - INFO - the user ID extracted from token in decode: 3
+2024-02-23 15:56:54,550 - INFO - the user id after decoding: 3
