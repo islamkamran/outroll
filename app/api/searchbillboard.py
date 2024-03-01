@@ -10,12 +10,10 @@ router = APIRouter()
 @router.get("/v1/searchbillboard")
 def search_list(place: str = Query(None), min_price: str = Query(None), max_price: str = Query(None), type: str = Query(None), db: Session = Depends(get_db)):
     try:
-        print(place)
         search_criteria = {}
 
         if place:
             place_list = place.replace(" ", "").split(',')  # remove the spaces and make it a list
-            print(place_list)
             search_criteria['place'] = place_list
 
         if min_price is not None or max_price is not None:
