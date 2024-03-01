@@ -36,7 +36,7 @@ app.add_middleware(
 # Just for checking if the application is working properly
 @app.get("/")
 async def main():
-    return {"message": "Hello World"}
+    return {"message": "Application is Working"}
 
 
 # API routes name of the modules remember not the routes itself

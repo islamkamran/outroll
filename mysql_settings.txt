@@ -1,0 +1,1 @@
+; DATABASE_URL = mysql+pymysql://Rollout:Rollout_4321@34.240.6.17:3306/Rollout

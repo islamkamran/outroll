@@ -19,6 +19,8 @@ class RollOutBillBoard(Base):
     price = Column(String, index=True, nullable=False)
     size = Column(String, index=True, nullable=False)
     measurement = Column(String, index=True, nullable=False)  # This line is for checking if the measurement will be in inches, foots or meters
+    type = Column(String, index=True, nullable=False) # This line show the type of the billboard
+    installation = Column(String, index=True, nullable=False) # This line is for checking if the owner provides installation or not
     status = Column(String, index=True, nullable=False)
     register_date = Column(String, nullable=False)
     picture = Column(String, index=True, nullable=False)

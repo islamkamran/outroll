@@ -86,5 +86,42 @@ def book_billboard(db: Session, user_data):
     return book_new_billboard.bookingbillboardid
 
 
-def search_billboards(db: Session, place):
-    return db.query(RollOutBillBoard).filter(or_(*[RollOutBillBoard.location.ilike(f"%{loc}%") for loc in place])).all()
+def change_status_message(db: Session, user_data):
+    user_data = BookBillBoard(**user_data.dict())
+    status_message = db.query(RollOutBillBoard).filter(RollOutBillBoard.fk_user_id==user_data.fk_user_id).first()
+    try:
+        if status_message:
+            status_message.status = user_data.booking_status
+            db.commit()
+            logging.INFO("status message of the rollout is changed to the user given status")
+            return status_message
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+def search_billboards(db: Session, search_criteria: dict):
+    print("hello2")
+    print(search_criteria)
+    query = db.query(RollOutBillBoard)
+
+    if 'place' in search_criteria and search_criteria['place']:
+        locations_conditions = [RollOutBillBoard.location.ilike(f"%{loc}%") for loc in search_criteria['place']]
+
+        query = query.filter(or_(*locations_conditions))
+
+    if 'price_range' in search_criteria and search_criteria['price_range']:
+        min_price, max_price = search_criteria['price_range']
+        if min_price is not None and max_price is not None:
+            query = query.filter(RollOutBillBoard.price.between(min_price, max_price))
+        elif min_price is not None:  # Only min_price provided
+            query = query.filter(RollOutBillBoard.price >= min_price)
+        elif max_price is not None:  # Only max_price provided
+            query = query.filter(RollOutBillBoard.price <= max_price)
+
+    if 'type' in search_criteria and search_criteria['type']:
+        query = query.filter(RollOutBillBoard.type == search_criteria['type'])
+
+    return query.all()
+
+
+# db.query(RollOutBillBoard).filter(or_(*[RollOutBillBoard.location.ilike(f"%{loc}%") for loc in place])).all()

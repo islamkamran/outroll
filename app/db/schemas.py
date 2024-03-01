@@ -37,6 +37,8 @@ class Billboard(BaseModel):
     price: int
     size: str
     measurement: str
+    type: str
+    installation: str
     status: str
     register_date: str
     # picture: Optional[str]

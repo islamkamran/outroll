@@ -1,0 +1,108 @@
+2024-02-15 11:34:00,909 - INFO - the user id after decoding: 9
+2024-02-15 15:53:22,722 - INFO - the user record found in DB: <app.db.models.User object at 0x7f2096e16500>
+2024-02-15 15:53:22,722 - INFO - Finding if user record exist in DB
+2024-02-15 15:53:22,722 - INFO - checking the user credentials if correct than access will be given
+2024-02-15 15:53:22,722 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-02-15 15:53:23,120 - INFO - JWT token created for the data of the user
+2024-02-15 15:53:23,121 - INFO - returning the token generated from jwt_access_token() funtion
+2024-02-15 15:53:23,121 - INFO - JWT refresh token created for the user data
+2024-02-15 15:53:23,121 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-02-16 15:44:53,270 - INFO - the user record found in DB: <app.db.models.User object at 0x7f051966ac80>
+2024-02-16 15:44:53,281 - INFO - Finding if user record exist in DB
+2024-02-16 15:44:53,282 - INFO - checking the user credentials if correct than access will be given
+2024-02-16 15:44:53,283 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-02-16 15:44:53,618 - INFO - JWT token created for the data of the user
+2024-02-16 15:44:53,618 - INFO - returning the token generated from jwt_access_token() funtion
+2024-02-16 15:44:53,618 - INFO - JWT refresh token created for the user data
+2024-02-16 15:44:53,619 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-02-16 15:45:31,697 - INFO - the user record found in DB: <app.db.models.User object at 0x7fc2a7a4ac80>
+2024-02-16 15:45:31,697 - INFO - Finding if user record exist in DB
+2024-02-16 15:45:31,697 - INFO - checking the user credentials if correct than access will be given
+2024-02-16 15:45:31,697 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-02-16 15:45:32,007 - INFO - JWT token created for the data of the user
+2024-02-16 15:45:32,008 - INFO - returning the token generated from jwt_access_token() funtion
+2024-02-16 15:45:32,008 - INFO - JWT refresh token created for the user data
+2024-02-16 15:45:32,008 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-02-16 15:46:09,981 - INFO - the user record found in DB: <app.db.models.User object at 0x7fc2a7a492a0>
+2024-02-16 15:46:09,981 - INFO - Finding if user record exist in DB
+2024-02-16 15:46:09,982 - INFO - checking the user credentials if correct than access will be given
+2024-02-16 15:46:10,275 - INFO - JWT token created for the data of the user
+2024-02-16 15:46:10,275 - INFO - returning the token generated from jwt_access_token() funtion
+2024-02-16 15:46:10,275 - INFO - JWT refresh token created for the user data
+2024-02-16 15:46:10,275 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-02-16 15:46:31,831 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 15:46:31,831 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 15:46:31,832 - INFO - the user ID extracted from token in decode: 9
+2024-02-16 15:46:31,832 - INFO - the user id after decoding: 9
+2024-02-16 15:47:44,948 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 15:47:44,948 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 15:47:44,949 - INFO - the user ID extracted from token in decode: 9
+2024-02-16 15:47:44,949 - INFO - the user id after decoding: 9
+2024-02-16 15:48:00,848 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 15:48:00,848 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 15:48:00,848 - INFO - the user ID extracted from token in decode: 9
+2024-02-16 15:48:00,848 - INFO - the user id after decoding: 9
+2024-02-16 15:48:02,349 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 15:48:02,349 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 15:48:02,349 - INFO - the user ID extracted from token in decode: 9
+2024-02-16 15:48:02,349 - INFO - the user id after decoding: 9
+2024-02-16 15:48:33,887 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 15:48:33,887 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 15:48:33,887 - ERROR - Error occured in jwt_token_decode helper function
+2024-02-16 15:49:37,883 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 15:49:37,883 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 15:49:37,884 - ERROR - Error occured in jwt_token_decode helper function
+2024-02-16 16:32:20,240 - INFO - the user record found in DB: <app.db.models.User object at 0x7f87eb03ec80>
+2024-02-16 16:32:20,240 - INFO - Finding if user record exist in DB
+2024-02-16 16:32:20,240 - INFO - checking the user credentials if correct than access will be given
+2024-02-16 16:32:20,240 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-02-16 16:32:20,559 - INFO - JWT token created for the data of the user
+2024-02-16 16:32:20,559 - INFO - returning the token generated from jwt_access_token() funtion
+2024-02-16 16:32:20,560 - INFO - JWT refresh token created for the user data
+2024-02-16 16:32:20,560 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-02-16 16:32:25,600 - INFO - the user record found in DB: <app.db.models.User object at 0x7f87eb03d210>
+2024-02-16 16:32:25,601 - INFO - Finding if user record exist in DB
+2024-02-16 16:32:25,601 - INFO - checking the user credentials if correct than access will be given
+2024-02-16 16:32:25,890 - INFO - JWT token created for the data of the user
+2024-02-16 16:32:25,890 - INFO - returning the token generated from jwt_access_token() funtion
+2024-02-16 16:32:25,890 - INFO - JWT refresh token created for the user data
+2024-02-16 16:32:25,890 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-02-16 16:32:50,775 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 16:32:50,775 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 16:32:50,775 - INFO - the user ID extracted from token in decode: 9
+2024-02-16 16:32:50,775 - INFO - the user id after decoding: 9
+2024-02-16 16:32:50,775 - INFO - returning my booked billboards from crud funtion my_booked_billboards which is accessing BookBillBoard table
+2024-02-16 16:33:49,510 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 16:33:49,510 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 16:33:49,510 - ERROR - Error occured in jwt_token_decode helper function
+2024-02-16 16:33:52,775 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 16:33:52,775 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 16:33:52,776 - INFO - the user ID extracted from token in decode: 9
+2024-02-16 16:33:52,776 - INFO - JWT token created for the data of the user
+2024-02-16 16:33:52,776 - INFO - new token generated in refresh api: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksImV4cCI6MTcwODA4NDEzMn0.P6xORzyA3C073CGDynNxoRcxmGcXdmF8HofTqfLCydE
+2024-02-16 16:34:08,679 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 16:34:08,679 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 16:34:08,679 - ERROR - Error occured in jwt_token_decode helper function
+2024-02-16 16:34:16,597 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 16:34:16,597 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-02-16 16:34:16,598 - INFO - the user ID extracted from token in decode: 9
+2024-02-16 16:34:16,598 - INFO - JWT token created for the data of the user
+2024-02-16 16:34:16,598 - INFO - new token generated in refresh api: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksImV4cCI6MTcwODA4NDE1Nn0.3GzeHkF9fZzmGaq2-xqiZSPRf0JuDm1AZl-ST2uLYrE
+2024-02-16 16:34:26,306 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-02-16 16:34:26,306 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key

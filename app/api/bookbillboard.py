@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends, Header
 from app.db.schemas import Book_Billboard, Booking_Done
 from sqlalchemy.orm import Session
 from app.db.db_setup import get_db
-from app.db.crud import book_billboard
+from app.db.crud import book_billboard, change_status_message
 from app.helper.jwt_token_decode import decode_token
 import logging
 
@@ -24,7 +24,6 @@ def book(user_data: Book_Billboard, authorization: str = Header(None), db: Sessi
     booking_id = book_billboard(db, Booking_Done(**billboard_data))
     logging.info(f'Booking done the id is: {booking_id}')
     retval = {
-        "booking_id": booking_id
     }
 
     return {"Message": "Successfull", "Booking Successful": retval}
