@@ -10,7 +10,7 @@ SQL_DATABASE_URI = os.getenv("DATABASE_URL")
 
 engine = create_engine(
     SQL_DATABASE_URI,
-    connect_args={"check_same_thread": False}
+    # connect_args={"check_same_thread": False}
 )
 
 SessionLocal = sessionmaker(
