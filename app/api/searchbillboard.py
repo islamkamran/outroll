@@ -24,7 +24,7 @@ def search_list(place: str = Query(None), min_price: str = Query(None), max_pric
 
         if length is not None or width is not None:
             search_criteria['size_range'] = (length, width)
-        
+
         return {"List": search_billboards(db, search_criteria)}
     except Exception as e:
         logging.error(f'Error occured in listbillboards api; {str(e)}')
