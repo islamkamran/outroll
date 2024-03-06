@@ -13,13 +13,16 @@ def myrollouts(authorization: str = Header(None), db: Session = Depends(get_db))
     if authorization is None:
         logging.error('The token entered for the user is either wrong or expired')
         raise HTTPException(status_code=401, detail="Unauthorized")
-    print(f'the new token in decode: {authorization}')
+    
     token = authorization.split(" ")[1] if authorization.startswith("Bearer ") else authorization
     print(f'cutting the barear : {token}')
+
     logging.info('token have two parts some time writen as token "value of token" or directly "token"')
+    
     # we have return both the id and the complete data the only purpose is incase of refresh token we need all data in normal case we only need the id as foreign key
     user_id, retval = decode_token(token)  # Extracting the user_id as it would be used as foreign Key in the rollout table
     logging.info(f'the user id after decoding: {user_id}')
+    
     print(f'the id from new token: {user_id}')
     try:
         return {"My Published Rollouts": my_billboards(db, user_id)}

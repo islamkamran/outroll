@@ -35,13 +35,13 @@ class Billboard(BaseModel):
     print("in pydantic")
     location: str
     price: int
-    size: str
-    measurement: str
+    length: str
+    width: str
+    measurement_unit: str
     type: str
     installation: str
     status: str
     register_date: str
-    # picture: Optional[str]
 
     class Config:
         orm_mode = True

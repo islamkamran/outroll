@@ -15,8 +15,9 @@ UPLOAD_DIR = "uploads"
 
 @router.post("/v1/rolloutbillboard")
 # def rollout(user_data: Billboard, file: UploadFile = File(...), authorization: str = Header(None), db: Session = Depends(get_db)): # This line was used if we want a direct JSON to be added from from end if we want to add files with json we need Form data the below code is for form data
-def rollout(location: str = Form(...), price: int = Form(...), size: str = Form(...),measurement: str = Form(...), type: str = Form(...), installation: str = Form(...), status: str = Form(...), register_date: str = Form(), file: UploadFile = File(...), authorization: str = Header(None), db: Session = Depends(get_db)):
+def rollout(location: str = Form(...), price: int = Form(...), length: str = Form(...), width: str = Form(...), measurement_unit: str = Form(...), type: str = Form(...), installation: str = Form(...), status: str = Form(...), register_date: str = Form(), file: UploadFile = File(...), authorization: str = Header(None), db: Session = Depends(get_db)):
     try:
+        print(2)
         if authorization is None:
             logging.error('The token entered for the user is either wrong or expired')
             raise HTTPException(status_code=401, detail="Unauthorized")
@@ -26,7 +27,7 @@ def rollout(location: str = Form(...), price: int = Form(...), size: str = Form(
         user_id, retval = decode_token(token)  # Extracting the user_id as it would be used as foreign Key in the rollout table
         logging.info(f'the user id after decoding: {user_id}')
         # checking data through pydantic
-        user_data = Billboard(location=location, price=price, size=size, measurement=measurement, type=type, installation=installation, status=status, register_date=register_date)
+        user_data = Billboard(location=location, price=price, length=length, width=width, measurement_unit=measurement_unit, type=type, installation=installation, status=status, register_date=register_date)
         billboard_data = user_data.dict()
 
         try:
@@ -54,3 +55,4 @@ def rollout(location: str = Form(...), price: int = Form(...), size: str = Form(
     except Exception as e:
         logging.error(f'Error occured while rollouting billboard: {str(e)}')
         raise HTTPException(status_code=409, detail=str(e))
+

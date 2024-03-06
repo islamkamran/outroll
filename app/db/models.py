@@ -17,8 +17,9 @@ class RollOutBillBoard(Base):
     rolloutid = Column(Integer, primary_key=True, index=True, nullable=False)
     location = Column(String(255), index=True, nullable=False)
     price = Column(String(255), index=True, nullable=False)
-    size = Column(String(255), index=True, nullable=False)
-    measurement = Column(String(255), index=True, nullable=False)  # This line is for checking if the measurement will be in inches, foots or meters
+    length = Column(String(255), index=True, nullable=False)
+    width = Column(String(255), index=True, nullable=False)
+    measurement_unit = Column(String(255), index=True, nullable=False)  # This line is for checking if the measurement will be in inches, foots or meters
     type = Column(String(255), index=True, nullable=False) # This line show the type of the billboard
     installation = Column(String(255), index=True, nullable=False) # This line is for checking if the owner provides installation or not
     status = Column(String(255), index=True, nullable=False)

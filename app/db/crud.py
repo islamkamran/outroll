@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from app.db.models import User, RollOutBillBoard, BookBillBoard
 from app.db.schemas import ForgotPassword
 import logging
-from sqlalchemy import or_
+from sqlalchemy import or_, and_
 from fastapi import HTTPException
 
 
@@ -120,6 +120,22 @@ def search_billboards(db: Session, search_criteria: dict):
 
     if 'type' in search_criteria and search_criteria['type']:
         query = query.filter(RollOutBillBoard.type == search_criteria['type'])
+
+        # Handle size search
+    if 'size_range' in search_criteria and search_criteria['size_range']:
+        length, width = search_criteria['size_range']
+        if length and width:
+            # Example: find billboards where each dimension is within 20% of the requested dimension
+            length_lower_bound = float(length) * 0.8
+            length_upper_bound = float(length) * 1.2
+            width_lower_bound = float(width) * 0.8
+            width_upper_bound = float(width) * 1.2
+            query = query.filter(
+                and_(
+                    RollOutBillBoard.length.between(length_lower_bound, length_upper_bound),
+                    RollOutBillBoard.width.between(width_lower_bound, width_upper_bound)
+                )
+            )
 
     return query.all()
 
