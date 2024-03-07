@@ -18,7 +18,7 @@ def autheticate_user(user_record, user_data):
         # remember the sequence of decrypting of matters !!!!!!!!
         if not verify_password(user_data.password, user_record.password):
             logging.error('Error occured in authenticating the credentials of the user')
-            raise HTTPException(status_code=400, detail="Incorrect email/password")
+            raise HTTPException(status_code=400, detail="password/phonenumber")
 
         retval = {
             "userid": user_record.id,
@@ -30,4 +30,4 @@ def autheticate_user(user_record, user_data):
         return {"access_token": jwt_access_token(retval), "token_type": "bearer", "refresh_token": jwt_refresh_token(retval)}
     except Exception as e:
         logging.error('Error occured in authenticate_user')
-        raise HTTPException(status_code=400, detail=f"{e}")
+        return {"error": str(e)}

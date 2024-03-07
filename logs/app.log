@@ -1,5 +1,106 @@
-2024-03-06 14:53:12,953 - INFO - the user id after decoding: 1
-2024-03-06 14:53:12,981 - INFO - data: {'location': 'qilla bala hisar', 'price': 15000, 'length': '50', 'width': '80', 'measurement_unit': 'ft', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '6/3/2024', 'picture': 'uploads/5_s1_3.png', 'fk_user_id': 1}
-2024-03-06 14:53:12,981 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-06 15:10:14,475 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
-2024-03-06 15:11:27,432 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
+2024-03-07 11:35:39,094 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-07 11:37:52,418 - INFO - the user record found in DB: <app.db.models.User object at 0x7f19856736a0>
+2024-03-07 11:37:52,418 - INFO - Finding if user record exist in DB
+2024-03-07 11:37:52,418 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:37:52,419 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:38:24,471 - INFO - the user record found in DB: <app.db.models.User object at 0x7fc2cca676a0>
+2024-03-07 11:38:24,471 - INFO - Finding if user record exist in DB
+2024-03-07 11:38:24,471 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:38:24,472 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:38:24,776 - ERROR - Error occured in authenticate_user
+2024-03-07 11:38:24,776 - ERROR - Error occured in signin: 400: local variable 'retval' referenced before assignment
+2024-03-07 11:39:04,530 - INFO - the user record found in DB: <app.db.models.User object at 0x7f017d96b6a0>
+2024-03-07 11:39:04,530 - INFO - Finding if user record exist in DB
+2024-03-07 11:39:04,530 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:39:04,531 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:39:41,086 - INFO - the user record found in DB: <app.db.models.User object at 0x7f68fe57b6a0>
+2024-03-07 11:39:41,086 - INFO - Finding if user record exist in DB
+2024-03-07 11:39:41,086 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:39:41,087 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:41:45,218 - INFO - the user record found in DB: <app.db.models.User object at 0x7ffa400676a0>
+2024-03-07 11:41:45,218 - INFO - Finding if user record exist in DB
+2024-03-07 11:41:45,218 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:41:45,218 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:41:45,520 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-07 11:41:45,520 - ERROR - Error occured in authenticate_user
+2024-03-07 11:41:45,520 - ERROR - Error occured in signin: 400: 400: password/email error
+2024-03-07 11:42:00,643 - INFO - the user record found in DB: <app.db.models.User object at 0x7f8c208736a0>
+2024-03-07 11:42:00,644 - INFO - Finding if user record exist in DB
+2024-03-07 11:42:00,644 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:42:00,645 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:42:00,958 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-07 11:42:00,958 - ERROR - Error occured in authenticate_user
+2024-03-07 11:42:00,958 - ERROR - Error occured in signin: 400: 404: password/email error
+2024-03-07 11:42:42,432 - INFO - the user record found in DB: <app.db.models.User object at 0x7f27f637b6a0>
+2024-03-07 11:42:42,433 - INFO - Finding if user record exist in DB
+2024-03-07 11:42:42,433 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:42:42,434 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:42:42,746 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-07 11:42:42,747 - INFO - JWT token created for the data of the user
+2024-03-07 11:42:42,747 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-07 11:42:42,747 - INFO - JWT refresh token created for the user data
+2024-03-07 11:42:42,747 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-07 11:44:15,096 - INFO - the user record found in DB: <app.db.models.User object at 0x7f63803936a0>
+2024-03-07 11:44:15,096 - INFO - Finding if user record exist in DB
+2024-03-07 11:44:15,096 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:44:15,096 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:45:16,443 - INFO - the user record found in DB: <app.db.models.User object at 0x7fcef89676a0>
+2024-03-07 11:45:16,443 - INFO - Finding if user record exist in DB
+2024-03-07 11:45:16,443 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:45:16,444 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:46:27,047 - INFO - the user record found in DB: <app.db.models.User object at 0x7f674599b6a0>
+2024-03-07 11:46:27,047 - INFO - Finding if user record exist in DB
+2024-03-07 11:46:27,047 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:46:27,048 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:46:27,354 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-07 11:46:27,354 - ERROR - Error occured in authenticate_user
+2024-03-07 11:48:35,925 - INFO - the user record found in DB: <app.db.models.User object at 0x7f74fae776a0>
+2024-03-07 11:48:35,926 - INFO - Finding if user record exist in DB
+2024-03-07 11:48:35,926 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:48:35,926 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-07 11:48:36,242 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-07 11:48:36,242 - ERROR - Error occured in authenticate_user
