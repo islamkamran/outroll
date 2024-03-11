@@ -28,7 +28,7 @@ class SigninWithGoogle(BaseModel):
 
 class ForgotPassword(BaseModel):
     phonenumber: Optional[str] = Field(None, min_length=11, max_length=15)
-    email: Optional[str] = Field(None, min_length=8)
+    password: Optional[str] = Field(None, min_length=8)
 
 
 class Billboard(BaseModel):

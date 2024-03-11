@@ -4,6 +4,7 @@ from app.db.schemas import ForgotPassword
 import logging
 from sqlalchemy import or_, and_
 from fastapi import HTTPException
+from app.helper.password_hashing import hashedpassword
 
 
 def create_user(db: Session, user_data):
@@ -28,12 +29,20 @@ async def get_user_by_google_credentials(db: Session, user_data):
     return user_record
 
 
-def get_forgot_password(db: Session, user_data: ForgotPassword):
-    if user_data.phonenumber:
-        return db.query(User).filter(User.phonenumber == user_data.phonenumber).first()
-    elif user_data.email:
-        return db.query(User).filter(User.email == user_data.email).first()
-    return None
+def update_password(db: Session, user_data: ForgotPassword):
+    try:
+        user = db.query(User).filter(User.phonenumber == user_data.phonenumber).first()
+        if user:
+            user_data.password = hashedpassword(user_data.password)
+            user.password = user_data.password
+            db.commit()
+            return {'message': 'password updated successfully'}
+        else:
+            return {'message': 'no user found'}
+
+    except Exception as e:
+        return {"message": str(e)}
+
 
 
 # **************** BillBoards *************************
