@@ -1,92 +1,114 @@
-2024-03-01 12:21:31,816 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-01 12:21:46,213 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 12:22:18,102 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 12:22:30,327 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 12:23:11,250 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 12:23:39,584 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 12:23:55,174 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 12:24:50,278 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 12:25:11,121 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 12:25:30,790 - ERROR - Error occured in listbillboards api; argument of type 'function' is not iterable
-2024-03-01 13:48:20,014 - INFO - the user record found in DB: <app.db.models.User object at 0x7fc9097cac80>
-2024-03-01 13:48:20,015 - INFO - Finding if user record exist in DB
-2024-03-01 13:48:20,015 - INFO - checking the user credentials if correct than access will be given
-2024-03-01 13:48:20,015 - WARNING - (trapped) error reading bcrypt version
+2024-03-06 14:53:12,953 - INFO - the user id after decoding: 1
+2024-03-06 14:53:12,981 - INFO - data: {'location': 'qilla bala hisar', 'price': 15000, 'length': '50', 'width': '80', 'measurement_unit': 'ft', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '6/3/2024', 'picture': 'uploads/5_s1_3.png', 'fk_user_id': 1}
+2024-03-06 14:53:12,981 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
+2024-03-06 15:10:14,475 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
+2024-03-06 15:11:27,432 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
+2024-03-07 10:52:48,693 - INFO - the user record found in DB: <app.db.models.User object at 0x7f5fb4b636a0>
+2024-03-07 10:52:48,706 - INFO - Finding if user record exist in DB
+2024-03-07 10:52:48,706 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 10:52:48,707 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-01 13:48:20,350 - INFO - JWT token created for the data of the user
-2024-03-01 13:48:20,351 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-01 13:48:20,351 - INFO - JWT refresh token created for the user data
-2024-03-01 13:48:20,351 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-01 13:48:36,408 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-01 13:48:36,408 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-01 13:48:36,409 - INFO - the user ID extracted from token in decode: 1
-2024-03-01 13:48:36,409 - INFO - the user id after decoding: 1
-2024-03-01 13:48:36,409 - INFO - data: {'location': 'bluearea, islamabad', 'price': 150, 'size': '30x30', 'measurement': 'meter', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '1/3/2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-03-01 13:48:36,409 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-01 13:48:42,097 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-01 13:48:42,097 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-01 13:48:42,098 - INFO - the user ID extracted from token in decode: 1
-2024-03-01 13:48:42,098 - INFO - the user id after decoding: 1
-2024-03-01 13:48:42,098 - INFO - data: {'location': 'bluearea, islamabad', 'price': 1160, 'size': '30x30', 'measurement': 'meter', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '1/3/2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-03-01 13:48:42,098 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-01 13:48:47,112 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-01 13:48:47,112 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-01 13:48:47,112 - INFO - the user ID extracted from token in decode: 1
-2024-03-01 13:48:47,113 - INFO - the user id after decoding: 1
-2024-03-01 13:48:47,113 - INFO - data: {'location': 'bluearea, islamabad', 'price': 500000, 'size': '30x30', 'measurement': 'meter', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '1/3/2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-03-01 13:48:47,113 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-01 13:48:52,805 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-01 13:48:52,806 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-01 13:48:52,806 - INFO - the user ID extracted from token in decode: 1
-2024-03-01 13:48:52,806 - INFO - the user id after decoding: 1
-2024-03-01 13:48:52,806 - INFO - data: {'location': 'bluearea, islamabad', 'price': 145730, 'size': '30x30', 'measurement': 'meter', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '1/3/2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-03-01 13:48:52,807 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-01 13:48:57,454 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-01 13:48:57,454 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-01 13:48:57,455 - INFO - the user ID extracted from token in decode: 1
-2024-03-01 13:48:57,455 - INFO - the user id after decoding: 1
-2024-03-01 13:48:57,455 - INFO - data: {'location': 'bluearea, islamabad', 'price': 1000, 'size': '30x30', 'measurement': 'meter', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '1/3/2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-03-01 13:48:57,455 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-01 14:17:00,013 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
-2024-03-04 10:48:40,521 - INFO - Attempting to register user islamkamran332@gmail.com
-2024-03-04 10:48:40,530 - WARNING - (trapped) error reading bcrypt version
+2024-03-07 10:52:49,030 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-07 10:52:49,030 - ERROR - Error occured in authenticate_user
+2024-03-07 10:52:49,030 - ERROR - Error occured in signin: 400: 400: Incorrect email/password
+2024-03-07 10:53:02,806 - INFO - the user record found in DB: <app.db.models.User object at 0x7f5fb4b61ab0>
+2024-03-07 10:53:02,806 - INFO - Finding if user record exist in DB
+2024-03-07 10:53:02,806 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 10:53:03,126 - INFO - JWT token created for the data of the user
+2024-03-07 10:53:03,126 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-07 10:53:03,127 - INFO - JWT refresh token created for the user data
+2024-03-07 10:53:03,127 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-07 10:54:45,621 - INFO - the user record found in DB: <app.db.models.User object at 0x7f5fb4b61090>
+2024-03-07 10:54:45,622 - INFO - Finding if user record exist in DB
+2024-03-07 10:54:45,622 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 10:54:45,906 - INFO - JWT token created for the data of the user
+2024-03-07 10:54:45,906 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-07 10:54:45,906 - INFO - JWT refresh token created for the user data
+2024-03-07 10:54:45,906 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-07 10:57:25,913 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-07 10:57:25,913 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-07 10:57:25,914 - INFO - the user ID extracted from token in decode: 1
+2024-03-07 10:57:25,914 - INFO - the user id after decoding: 1
+2024-03-07 10:57:25,914 - INFO - data: {'location': 'thal, amberkhel', 'price': 150000, 'length': '30', 'width': '30', 'measurement_unit': 'meter', 'type': 'wall mounted', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '7/3/24', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
+2024-03-07 10:57:25,914 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
+2024-03-07 10:57:37,013 - ERROR - The token entered for the user is either wrong or expired
+2024-03-07 10:57:37,013 - ERROR - Error occured while rollouting billboard: 401: Unauthorized
+2024-03-07 10:58:27,764 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-07 10:58:27,764 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-07 10:58:27,764 - INFO - the user ID extracted from token in decode: 1
+2024-03-07 10:58:27,765 - INFO - the user id after decoding: 1
+2024-03-07 10:59:10,469 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-07 10:59:10,470 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-07 10:59:10,470 - INFO - the user ID extracted from token in decode: 1
+2024-03-07 10:59:10,470 - INFO - new token generated in refresh api
+2024-03-07 10:59:10,470 - INFO - JWT token created for the data of the user
+2024-03-07 10:59:10,470 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-07 10:59:28,974 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-07 10:59:28,974 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-07 10:59:28,974 - INFO - the user ID extracted from token in decode: 1
+2024-03-07 10:59:28,974 - INFO - the user id after decoding: 1
+2024-03-07 11:06:31,913 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
+2024-03-07 11:08:42,028 - ERROR - The token entered for the user is either wrong or expired
+2024-03-07 11:08:42,029 - ERROR - Error occured while rollouting billboard: 401: Unauthorized
+2024-03-07 11:09:06,553 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-07 11:09:06,554 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-07 11:09:06,554 - INFO - the user ID extracted from token in decode: 1
+2024-03-07 11:09:06,554 - INFO - the user id after decoding: 1
+2024-03-07 11:09:06,554 - ERROR - Error occured while rollouting billboard: 5 validation errors for Billboard
+length
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+width
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+measurement_unit
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+type
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+installation
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2024-03-07 11:10:02,154 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-07 11:10:02,155 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-07 11:10:02,155 - INFO - the user ID extracted from token in decode: 1
+2024-03-07 11:10:02,155 - INFO - the user id after decoding: 1
+2024-03-07 11:10:02,155 - ERROR - Error occured while rollouting billboard: 5 validation errors for Billboard
+length
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+width
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+measurement_unit
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+type
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+installation
+  Field required [type=missing, input_value={'location': 'hayatabad,p...er_date': '22-feb-2024'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+2024-03-07 11:30:24,616 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3b665636a0>
+2024-03-07 11:30:24,617 - INFO - Finding if user record exist in DB
+2024-03-07 11:30:24,617 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:30:24,617 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-04 10:48:41,645 - INFO - new user registered in DB with the id: 1
-2024-03-04 10:48:41,646 - INFO - new user is created islam kamran
-2024-03-04 10:48:41,646 - INFO - User sucessfully added
-2024-03-04 11:15:05,325 - INFO - Attempting to register user ahmedmaqsood@gmail.com
-2024-03-04 11:15:05,325 - WARNING - (trapped) error reading bcrypt version
+2024-03-07 11:30:24,926 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-07 11:30:24,926 - ERROR - Error occured in authenticate_user
+2024-03-07 11:30:24,926 - ERROR - Error occured in signin: 400: HTTPException.__init__() missing 1 required positional argument: 'status_code'
+2024-03-07 11:35:38,786 - INFO - the user record found in DB: <app.db.models.User object at 0x7fbbb0e736a0>
+2024-03-07 11:35:38,786 - INFO - Finding if user record exist in DB
+2024-03-07 11:35:38,786 - INFO - checking the user credentials if correct than access will be given
+2024-03-07 11:35:38,787 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-04 11:15:06,472 - INFO - new user registered in DB with the id: 2
-2024-03-04 11:15:06,472 - INFO - new user is created ahmed maqsood
-2024-03-04 11:15:06,473 - INFO - User sucessfully added
-2024-03-06 14:51:16,245 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-06 14:51:16,245 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-06 14:51:16,273 - INFO - the user ID extracted from token in decode: 1
-2024-03-06 14:51:16,273 - INFO - the user id after decoding: 1
-2024-03-06 14:51:16,274 - INFO - data: {'location': 'nokhar, mardan', 'price': 15000, 'length': '30', 'width': '30', 'measurement_unit': 'meter', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '6/3/2024', 'picture': 'uploads/5_s1_3.png', 'fk_user_id': 1}
-2024-03-06 14:51:16,277 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-06 14:51:59,114 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-06 14:51:59,114 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-06 14:51:59,115 - INFO - the user ID extracted from token in decode: 1
-2024-03-06 14:51:59,115 - INFO - the user id after decoding: 1
-2024-03-06 14:51:59,115 - INFO - data: {'location': 'qilla bala hisar', 'price': 15000, 'length': '20', 'width': '10', 'measurement_unit': 'meter', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '6/3/2024', 'picture': 'uploads/5_s1_3.png', 'fk_user_id': 1}
-2024-03-06 14:51:59,116 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-06 14:52:57,693 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-06 14:52:57,693 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-06 14:52:57,693 - INFO - the user ID extracted from token in decode: 1
-2024-03-06 14:52:57,693 - INFO - the user id after decoding: 1
-2024-03-06 14:52:57,694 - INFO - data: {'location': 'qilla bala hisar', 'price': 15000, 'length': '30', 'width': '40', 'measurement_unit': 'ft', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '6/3/2024', 'picture': 'uploads/5_s1_3.png', 'fk_user_id': 1}
-2024-03-06 14:52:57,694 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-06 14:53:12,953 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-06 14:53:12,953 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-06 14:53:12,953 - INFO - the user ID extracted from token in decode: 1

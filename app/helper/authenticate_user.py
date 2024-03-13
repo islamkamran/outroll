@@ -2,6 +2,7 @@ from fastapi import HTTPException
 from passlib.context import CryptContext
 from app.helper.jwt_token import jwt_access_token, jwt_refresh_token
 import logging
+import json
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
@@ -20,12 +21,13 @@ def autheticate_user(user_record, user_data):
             logging.error('Error occured in authenticating the credentials of the user')
             raise HTTPException(status_code=400, detail="password/phonenumber")
 
-        retval = {
+        retval = json.dumps({
             "userid": user_record.id,
             "username": user_record.fullname,
             "phonenumber": user_record.phonenumber,
             "email": user_record.email
-        }
+        })
+
         logging.debug('making the token and refresh token')
         return {"access_token": jwt_access_token(retval), "token_type": "bearer", "refresh_token": jwt_refresh_token(retval)}
     except Exception as e:
