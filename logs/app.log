@@ -1,83 +1,43 @@
-2024-03-11 15:08:39,460 - ERROR - Error occured in authenticating the credentials of the user
-2024-03-11 15:08:39,478 - ERROR - Error occured in authenticate_user
-2024-03-11 15:08:53,278 - INFO - the user record found in DB: <app.db.models.User object at 0x7fceb5f70cd0>
-2024-03-11 15:08:53,279 - INFO - Finding if user record exist in DB
-2024-03-11 15:08:53,279 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:08:53,565 - INFO - JWT token created for the data of the user
-2024-03-11 15:08:53,565 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 15:08:53,565 - INFO - JWT refresh token created for the user data
-2024-03-11 15:08:53,565 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 15:09:38,648 - INFO - the user record found in DB: <app.db.models.User object at 0x7f0f910676a0>
-2024-03-11 15:09:38,649 - INFO - Finding if user record exist in DB
-2024-03-11 15:09:38,649 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:09:38,649 - WARNING - (trapped) error reading bcrypt version
-Traceback (most recent call last):
-  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-    version = _bcrypt.__about__.__version__
-AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 15:09:38,949 - INFO - JWT token created for the data of the user
-2024-03-11 15:09:38,949 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 15:09:38,950 - INFO - JWT refresh token created for the user data
-2024-03-11 15:09:38,950 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 15:14:11,622 - INFO - the user record found in DB: <app.db.models.User object at 0x7fdfe988b6a0>
-2024-03-11 15:14:11,622 - INFO - Finding if user record exist in DB
-2024-03-11 15:14:11,622 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:14:11,623 - WARNING - (trapped) error reading bcrypt version
-Traceback (most recent call last):
-  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-    version = _bcrypt.__about__.__version__
-AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 15:14:11,934 - INFO - JWT token created for the data of the user
-2024-03-11 15:14:11,934 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 15:14:11,935 - INFO - JWT refresh token created for the user data
-2024-03-11 15:14:11,935 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 15:14:47,484 - INFO - the user record found in DB: <app.db.models.User object at 0x7fa9faf736a0>
-2024-03-11 15:14:47,484 - INFO - Finding if user record exist in DB
-2024-03-11 15:14:47,484 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:14:47,484 - WARNING - (trapped) error reading bcrypt version
-Traceback (most recent call last):
-  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-    version = _bcrypt.__about__.__version__
-AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 15:14:47,785 - INFO - JWT token created for the data of the user
-2024-03-11 15:14:47,785 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 15:14:47,786 - INFO - JWT refresh token created for the user data
-2024-03-11 15:14:47,786 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 15:15:10,895 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3a5d57f6a0>
-2024-03-11 15:15:10,895 - INFO - Finding if user record exist in DB
-2024-03-11 15:15:10,895 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:15:10,896 - WARNING - (trapped) error reading bcrypt version
-Traceback (most recent call last):
-  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-    version = _bcrypt.__about__.__version__
-AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 15:15:11,205 - INFO - JWT token created for the data of the user
-2024-03-11 15:15:11,205 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 15:15:11,205 - INFO - JWT refresh token created for the user data
-2024-03-11 15:15:11,206 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 15:16:27,428 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3a5d57c940>
-2024-03-11 15:16:27,428 - INFO - Finding if user record exist in DB
-2024-03-11 15:16:27,429 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:16:27,697 - INFO - JWT token created for the data of the user
-2024-03-11 15:16:27,698 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 15:16:27,698 - INFO - JWT refresh token created for the user data
-2024-03-11 15:16:27,698 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 15:21:11,791 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3da50636a0>
-2024-03-11 15:21:11,791 - INFO - Finding if user record exist in DB
-2024-03-11 15:21:11,792 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:21:11,792 - WARNING - (trapped) error reading bcrypt version
-Traceback (most recent call last):
-  File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-    version = _bcrypt.__about__.__version__
-AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 15:21:12,105 - INFO - JWT token created for the data of the user
-2024-03-11 15:21:12,105 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 15:21:12,106 - INFO - JWT refresh token created for the user data
-2024-03-11 15:21:12,106 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 15:21:13,633 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3da50627a0>
-2024-03-11 15:21:13,633 - INFO - Finding if user record exist in DB
-2024-03-11 15:21:13,633 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:21:13,903 - INFO - JWT token created for the data of the user
-2024-03-11 15:21:13,903 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 15:21:13,903 - INFO - JWT refresh token created for the user data
-2024-03-11 15:21:13,904 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-13 14:45:00,684 - INFO - data: {'name': 'zellbury top', 'description': 'bas kha shan zay de jani chance ba owey ka wadeghasto', 'location': 'Abdara Road', 'coordinates': '12, 10', 'price': 15000, 'advance_payment': '3000', 'length': '20', 'width': '20', 'measurement_unit': 'ft', 'type': 'static', 'installation': 'avaliable', 'installation_charges': '1000', 'status': 'avaliable', 'register_date': '13/march/2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
+2024-03-13 14:45:00,709 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
+2024-03-13 14:49:31,683 - INFO - the user record found in DB: <app.db.models.User object at 0x7f42c89eda50>
+2024-03-13 14:49:31,683 - INFO - Finding if user record exist in DB
+2024-03-13 14:49:31,683 - INFO - checking the user credentials if correct than access will be given
+2024-03-13 14:49:31,972 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-13 14:49:31,972 - ERROR - Error occured in authenticate_user
+2024-03-13 14:49:36,496 - INFO - the user record found in DB: <app.db.models.User object at 0x7f42c89eefe0>
+2024-03-13 14:49:36,496 - INFO - Finding if user record exist in DB
+2024-03-13 14:49:36,496 - INFO - checking the user credentials if correct than access will be given
+2024-03-13 14:49:36,775 - INFO - JWT token created for the data of the user
+2024-03-13 14:49:36,775 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-13 14:49:36,775 - INFO - JWT refresh token created for the user data
+2024-03-13 14:49:36,775 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-13 14:49:54,666 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
+2024-03-13 14:50:51,026 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-13 14:50:51,027 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-13 14:50:51,027 - INFO - the user ID extracted from token in decode: 1
+2024-03-13 14:50:51,027 - INFO - the user id after decoding: 1
+2024-03-13 14:50:59,635 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-13 14:50:59,635 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-13 14:50:59,635 - INFO - the user ID extracted from token in decode: 1
+2024-03-13 14:50:59,635 - INFO - the user id after decoding: 1
+2024-03-13 14:50:59,636 - INFO - returning my booked billboards from crud funtion my_booked_billboards which is accessing BookBillBoard table
+2024-03-13 14:57:05,080 - ERROR - The token entered for the user is either wrong or expired
+2024-03-13 14:57:05,080 - ERROR - Error occured while rollouting billboard: 401: Unauthorized
+2024-03-13 14:58:39,105 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-13 14:58:39,105 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-13 14:58:39,106 - INFO - the user ID extracted from token in decode: 1
+2024-03-13 14:58:39,106 - INFO - the user id after decoding: 1
+2024-03-13 14:58:39,107 - ERROR - Error occured while rollouting billboard: 404: [Errno 21] Is a directory: 'uploads/'
+2024-03-13 14:58:50,056 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-13 14:58:50,056 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-13 14:58:50,056 - INFO - the user ID extracted from token in decode: 1
+2024-03-13 14:58:50,056 - INFO - the user id after decoding: 1
+2024-03-13 14:58:50,057 - INFO - data: {'name': 'zellbury bottom', 'description': 'bas kha shan zay de jani chance ba owey ka wadeghasto', 'location': 'Abdara Road', 'coordinates': '12, 10', 'price': 15000, 'advance_payment': '3000', 'length': '20', 'width': '20', 'measurement_unit': 'ft', 'type': 'static', 'installation': 'avaliable', 'installation_charges': '1000', 'status': 'avaliable', 'register_date': '13/march/2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
+2024-03-13 14:59:01,746 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
+2024-03-13 14:59:18,273 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-13 14:59:18,273 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-13 14:59:18,273 - INFO - the user ID extracted from token in decode: 1
+2024-03-13 14:59:18,273 - INFO - the user id after decoding: 1
+2024-03-13 14:59:18,274 - INFO - data: {'name': 'zellbury top', 'description': 'bas kha shan zay de jani chance ba owey ka wadeghasto', 'location': 'Abdara Road', 'coordinates': '12, 10', 'price': 15000, 'advance_payment': '3000', 'length': '20', 'width': '20', 'measurement_unit': 'ft', 'type': 'static', 'installation': 'avaliable', 'installation_charges': '1000', 'status': 'avaliable', 'register_date': '13/march/2024', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
+2024-03-13 14:59:27,021 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table

@@ -36,7 +36,7 @@ app.add_middleware(
 # Just for checking if the application is working properly
 @app.get("/")
 async def main():
-    return {"message": "Application is Working"}
+    return {"message": "Application is Working (use: /docs to visit swagger documentation)"}
 
 
 # API routes name of the modules remember not the routes itself

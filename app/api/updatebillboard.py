@@ -15,7 +15,7 @@ UPLOAD_DIR = "uploads"
 
 @router.put("/v1/updatebillboard/{rollout_id}")
 # def rollout(user_data: Billboard, file: UploadFile = File(...), authorization: str = Header(None), db: Session = Depends(get_db)): # This line was used if we want a direct JSON to be added from from end if we want to add files with json we need Form data the below code is for form data
-def rollout(rollout_id: int, location: str = Form(...), price: int = Form(...), size: str = Form(...), measurement: str = Form(...), status: str = Form(...), register_date: str = Form(), file: UploadFile = File(...), authorization: str = Header(None), db: Session = Depends(get_db)):
+def rollout(rollout_id: int, name: str = Form(...), description: str = Form(...), location: str = Form(...), coordinates: str = Form(...), price: int = Form(...), advance_payment: str = Form(...), length: str = Form(...), width: str = Form(...), measurement_unit: str = Form(...), type: str = Form(...), installation: str = Form(...), installation_charges: str = Form(...), status: str = Form(...), register_date: str = Form(), file: UploadFile = File(...), authorization: str = Header(None), db: Session = Depends(get_db)):
     try:
         print(f'the id from front end: {rollout_id}')
         if authorization is None:
@@ -30,7 +30,8 @@ def rollout(rollout_id: int, location: str = Form(...), price: int = Form(...), 
         logging.info(f'the user id after decoding: {user_id}')
         # checking data through pydantic
 
-        user_data = Billboard(location=location, price=price, size=size, measurement=measurement, status=status, register_date=register_date)
+        # user_data = Billboard(location=location, price=price, size=size, measurement=measurement, status=status, register_date=register_date)
+        user_data = Billboard(name=name, description=description, location=location, coordinates=coordinates, price=price, advance_payment=advance_payment, length=length, width=width, measurement_unit=measurement_unit, type=type, installation=installation, installation_charges=installation_charges, status=status, register_date=register_date)  
         billboard_data = user_data.dict()
 
         try:

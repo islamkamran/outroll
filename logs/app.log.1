@@ -1,114 +1,117 @@
-2024-03-07 12:05:32,595 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-07 14:42:42,646 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
-2024-03-07 14:47:17,205 - INFO - the user record found in DB: <app.db.models.User object at 0x7fcd2c272080>
-2024-03-07 14:47:17,205 - INFO - Finding if user record exist in DB
-2024-03-07 14:47:17,206 - INFO - checking the user credentials if correct than access will be given
-2024-03-07 14:47:17,207 - WARNING - (trapped) error reading bcrypt version
+2024-03-11 15:08:39,460 - ERROR - Error occured in authenticating the credentials of the user
+2024-03-11 15:08:39,478 - ERROR - Error occured in authenticate_user
+2024-03-11 15:08:53,278 - INFO - the user record found in DB: <app.db.models.User object at 0x7fceb5f70cd0>
+2024-03-11 15:08:53,279 - INFO - Finding if user record exist in DB
+2024-03-11 15:08:53,279 - INFO - checking the user credentials if correct than access will be given
+2024-03-11 15:08:53,565 - INFO - JWT token created for the data of the user
+2024-03-11 15:08:53,565 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-11 15:08:53,565 - INFO - JWT refresh token created for the user data
+2024-03-11 15:08:53,565 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-11 15:09:38,648 - INFO - the user record found in DB: <app.db.models.User object at 0x7f0f910676a0>
+2024-03-11 15:09:38,649 - INFO - Finding if user record exist in DB
+2024-03-11 15:09:38,649 - INFO - checking the user credentials if correct than access will be given
+2024-03-11 15:09:38,649 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-07 14:47:17,603 - INFO - JWT token created for the data of the user
-2024-03-07 14:47:17,603 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-07 14:47:17,603 - INFO - JWT refresh token created for the user data
-2024-03-07 14:47:17,603 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-07 14:50:49,726 - INFO - token have two parts some time writen as token "value of token" or directly "token"
-2024-03-07 14:50:49,726 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
-2024-03-07 14:50:49,726 - INFO - the user ID extracted from token in decode: 1
-2024-03-07 14:50:49,726 - INFO - the user id after decoding: 1
-2024-03-07 14:50:49,727 - INFO - data: {'location': 'nokhar, thal', 'price': 15000, 'length': '30', 'width': '30', 'measurement_unit': 'ft', 'type': 'static', 'installation': 'avaliable', 'status': 'avaliable', 'register_date': '1/3/24', 'picture': 'uploads/1.jpeg', 'fk_user_id': 1}
-2024-03-07 14:50:49,727 - INFO - RolloutBillBoard table is recieving data from crud rollout_billboard
-2024-03-07 14:55:37,519 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
-2024-03-07 14:58:00,223 - INFO - Taking all the Billboards data in crud operations which is accessing RollOutBillBoards table
-2024-03-07 15:01:22,481 - INFO - the user record found in DB: <app.db.models.User object at 0x7fcd2c273a90>
-2024-03-07 15:01:22,481 - INFO - Finding if user record exist in DB
-2024-03-07 15:01:22,481 - INFO - checking the user credentials if correct than access will be given
-2024-03-07 15:01:22,763 - INFO - JWT token created for the data of the user
-2024-03-07 15:01:22,763 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-07 15:01:22,764 - INFO - JWT refresh token created for the user data
-2024-03-07 15:01:22,764 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 12:06:23,268 - INFO - the user record found in DB: <app.db.models.User object at 0x7ff8008736a0>
-2024-03-11 12:06:23,328 - INFO - Finding if user record exist in DB
-2024-03-11 12:06:23,328 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 12:06:23,328 - WARNING - (trapped) error reading bcrypt version
+2024-03-11 15:09:38,949 - INFO - JWT token created for the data of the user
+2024-03-11 15:09:38,949 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-11 15:09:38,950 - INFO - JWT refresh token created for the user data
+2024-03-11 15:09:38,950 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-11 15:14:11,622 - INFO - the user record found in DB: <app.db.models.User object at 0x7fdfe988b6a0>
+2024-03-11 15:14:11,622 - INFO - Finding if user record exist in DB
+2024-03-11 15:14:11,622 - INFO - checking the user credentials if correct than access will be given
+2024-03-11 15:14:11,623 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 12:06:23,753 - INFO - JWT token created for the data of the user
-2024-03-11 12:06:23,753 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 12:06:23,753 - INFO - JWT refresh token created for the user data
-2024-03-11 12:06:23,753 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 12:07:08,245 - INFO - the user record found in DB: <app.db.models.User object at 0x7ff8008711e0>
-2024-03-11 12:07:08,246 - INFO - Finding if user record exist in DB
-2024-03-11 12:07:08,246 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 12:07:08,538 - ERROR - Error occured in authenticating the credentials of the user
-2024-03-11 12:07:08,539 - ERROR - Error occured in authenticate_user
-2024-03-11 12:07:18,796 - INFO - the user record found in DB: <app.db.models.User object at 0x7ff800873370>
-2024-03-11 12:07:18,796 - INFO - Finding if user record exist in DB
-2024-03-11 12:07:18,796 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 12:07:19,081 - INFO - JWT token created for the data of the user
-2024-03-11 12:07:19,081 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 12:07:19,082 - INFO - JWT refresh token created for the user data
-2024-03-11 12:07:19,082 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 12:17:45,269 - INFO - the user record found in DB: <app.db.models.User object at 0x7fb0169976a0>
-2024-03-11 12:17:45,269 - INFO - Finding if user record exist in DB
-2024-03-11 12:17:45,269 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 12:17:45,270 - WARNING - (trapped) error reading bcrypt version
+2024-03-11 15:14:11,934 - INFO - JWT token created for the data of the user
+2024-03-11 15:14:11,934 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-11 15:14:11,935 - INFO - JWT refresh token created for the user data
+2024-03-11 15:14:11,935 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-11 15:14:47,484 - INFO - the user record found in DB: <app.db.models.User object at 0x7fa9faf736a0>
+2024-03-11 15:14:47,484 - INFO - Finding if user record exist in DB
+2024-03-11 15:14:47,484 - INFO - checking the user credentials if correct than access will be given
+2024-03-11 15:14:47,484 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 12:17:45,572 - INFO - JWT token created for the data of the user
-2024-03-11 12:17:45,572 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 12:17:45,572 - INFO - JWT refresh token created for the user data
-2024-03-11 12:17:45,572 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 12:18:46,006 - INFO - the user record found in DB: <app.db.models.User object at 0x7fb016994760>
-2024-03-11 12:18:46,006 - INFO - Finding if user record exist in DB
-2024-03-11 12:18:46,006 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 12:18:46,287 - INFO - JWT token created for the data of the user
-2024-03-11 12:18:46,287 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 12:18:46,287 - INFO - JWT refresh token created for the user data
-2024-03-11 12:18:46,287 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 12:20:19,196 - INFO - the user record found in DB: <app.db.models.User object at 0x7f2c2ed676a0>
-2024-03-11 12:20:19,196 - INFO - Finding if user record exist in DB
-2024-03-11 12:20:19,196 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 12:20:19,196 - WARNING - (trapped) error reading bcrypt version
+2024-03-11 15:14:47,785 - INFO - JWT token created for the data of the user
+2024-03-11 15:14:47,785 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-11 15:14:47,786 - INFO - JWT refresh token created for the user data
+2024-03-11 15:14:47,786 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-11 15:15:10,895 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3a5d57f6a0>
+2024-03-11 15:15:10,895 - INFO - Finding if user record exist in DB
+2024-03-11 15:15:10,895 - INFO - checking the user credentials if correct than access will be given
+2024-03-11 15:15:10,896 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 12:20:19,501 - INFO - JWT token created for the data of the user
-2024-03-11 12:20:19,501 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 12:20:19,501 - INFO - JWT refresh token created for the user data
-2024-03-11 12:20:19,501 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 12:21:21,667 - WARNING - (trapped) error reading bcrypt version
+2024-03-11 15:15:11,205 - INFO - JWT token created for the data of the user
+2024-03-11 15:15:11,205 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-11 15:15:11,205 - INFO - JWT refresh token created for the user data
+2024-03-11 15:15:11,206 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-11 15:16:27,428 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3a5d57c940>
+2024-03-11 15:16:27,428 - INFO - Finding if user record exist in DB
+2024-03-11 15:16:27,429 - INFO - checking the user credentials if correct than access will be given
+2024-03-11 15:16:27,697 - INFO - JWT token created for the data of the user
+2024-03-11 15:16:27,698 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-11 15:16:27,698 - INFO - JWT refresh token created for the user data
+2024-03-11 15:16:27,698 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-11 15:21:11,791 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3da50636a0>
+2024-03-11 15:21:11,791 - INFO - Finding if user record exist in DB
+2024-03-11 15:21:11,792 - INFO - checking the user credentials if correct than access will be given
+2024-03-11 15:21:11,792 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 12:23:50,161 - WARNING - (trapped) error reading bcrypt version
+2024-03-11 15:21:12,105 - INFO - JWT token created for the data of the user
+2024-03-11 15:21:12,105 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-11 15:21:12,106 - INFO - JWT refresh token created for the user data
+2024-03-11 15:21:12,106 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-11 15:21:13,633 - INFO - the user record found in DB: <app.db.models.User object at 0x7f3da50627a0>
+2024-03-11 15:21:13,633 - INFO - Finding if user record exist in DB
+2024-03-11 15:21:13,633 - INFO - checking the user credentials if correct than access will be given
+2024-03-11 15:21:13,903 - INFO - JWT token created for the data of the user
+2024-03-11 15:21:13,903 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-11 15:21:13,903 - INFO - JWT refresh token created for the user data
+2024-03-11 15:21:13,904 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-13 14:30:37,439 - INFO - the user record found in DB: None
+2024-03-13 14:30:37,439 - INFO - Finding if user record exist in DB
+2024-03-13 14:30:37,439 - ERROR - Error user not found: None
+2024-03-13 14:31:22,014 - INFO - Attempting to register user islamakamran332@gmail.com
+2024-03-13 14:32:19,922 - INFO - Attempting to register user islamakamran332@gmail.com
+2024-03-13 14:32:49,048 - INFO - Attempting to register user islamakamran332@gmail.com
+2024-03-13 14:33:36,174 - INFO - Attempting to register user islamakamran332@gmail.com
+2024-03-13 14:34:10,565 - INFO - Attempting to register user islamakamran332@gmail.com
+2024-03-13 14:34:10,565 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2024-03-11 12:24:09,099 - INFO - the user record found in DB: <app.db.models.User object at 0x7fb60da77df0>
-2024-03-11 12:24:09,099 - INFO - Finding if user record exist in DB
-2024-03-11 12:24:09,099 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 12:24:09,371 - ERROR - Error occured in authenticating the credentials of the user
-2024-03-11 12:24:09,371 - ERROR - Error occured in authenticate_user
-2024-03-11 12:24:23,262 - INFO - the user record found in DB: <app.db.models.User object at 0x7fb60da74be0>
-2024-03-11 12:24:23,262 - INFO - Finding if user record exist in DB
-2024-03-11 12:24:23,262 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 12:24:23,528 - INFO - JWT token created for the data of the user
-2024-03-11 12:24:23,528 - INFO - returning the token generated from jwt_access_token() funtion
-2024-03-11 12:24:23,528 - INFO - JWT refresh token created for the user data
-2024-03-11 12:24:23,528 - INFO - returning the refresh token generated from jwt_access_token() funtion
-2024-03-11 15:08:39,147 - INFO - the user record found in DB: <app.db.models.User object at 0x7fceb5f736a0>
-2024-03-11 15:08:39,147 - INFO - Finding if user record exist in DB
-2024-03-11 15:08:39,147 - INFO - checking the user credentials if correct than access will be given
-2024-03-11 15:08:39,148 - WARNING - (trapped) error reading bcrypt version
+2024-03-13 14:34:11,764 - INFO - new user registered in DB with the id: 1
+2024-03-13 14:34:11,765 - INFO - new user is created Muhammad Islam Kamran
+2024-03-13 14:34:11,765 - INFO - User sucessfully added
+2024-03-13 14:41:00,161 - INFO - Attempting to register user islamakamran332@gmail.com
+2024-03-13 14:41:00,161 - INFO - hashed password is called a seperate helper funtion to create hashed password
+2024-03-13 14:41:00,161 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/home/islam/Documents/K2X-Tech/rollout_k2x/venv/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-03-13 14:41:21,544 - INFO - the user record found in DB: <app.db.models.User object at 0x7f42c89ef2e0>
+2024-03-13 14:41:21,544 - INFO - Finding if user record exist in DB
+2024-03-13 14:41:21,544 - INFO - checking the user credentials if correct than access will be given
+2024-03-13 14:41:21,818 - INFO - JWT token created for the data of the user
+2024-03-13 14:41:21,819 - INFO - returning the token generated from jwt_access_token() funtion
+2024-03-13 14:41:21,819 - INFO - JWT refresh token created for the user data
+2024-03-13 14:41:21,819 - INFO - returning the refresh token generated from jwt_access_token() funtion
+2024-03-13 14:45:00,683 - INFO - token have two parts some time writen as token "value of token" or directly "token"
+2024-03-13 14:45:00,684 - INFO - trying to decode token and extract the ID from it so it will be used in foreign key
+2024-03-13 14:45:00,684 - INFO - the user ID extracted from token in decode: 1
+2024-03-13 14:45:00,684 - INFO - the user id after decoding: 1

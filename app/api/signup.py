@@ -14,16 +14,18 @@ router = APIRouter()
 async def signup(user_data: Signup, db: Session = Depends(get_db)):
     logging.info(f'Attempting to register user {user_data.email}')
     try:
+        print(1)
         if user_data.password != user_data.confirm_password:
             logging.error('Password and Confirm Password do not match')
             return {"Error": "Password do not match"}
 
-        logging.INFO('hashed password is called a seperate helper funtion to create hashed password')
+        logging.info('hashed password is called a seperate helper funtion to create hashed password')
         user_data.password = hashedpassword(user_data.password)
-
+        # print(2)
         new_user = create_user(db, User(**user_data.dict()))
+        # print(3)
         logging.info(f'new user is created {new_user.fullname}')
-
+        # print(4)
         if new_user:
             logging.info('User sucessfully added')
             return {"Message": "Register Successful"}
